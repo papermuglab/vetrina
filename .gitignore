@@ -1,0 +1,6 @@
+# Add any directories, files, or patterns you don't want to be tracked by version control
+nbproject
+application/config/config.php
+application/config/database.php
+uploads/products/*
+uploads/blog/*
