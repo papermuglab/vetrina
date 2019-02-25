@@ -65,7 +65,7 @@ class Dml {
     public function get($table, $field, $value) {
         $columns = "";
         $fields = $this->CI->db->list_fields($table);
-        $columns = array_diff($fields, array('is_deleted', 'added_on', 'modified_on', 'password'));
+        $columns = array_diff($fields, array('is_deleted', 'modified_on', 'password'));
         $fields = "";
         $fields = implode(',', $columns);
 

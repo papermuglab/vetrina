@@ -4,6 +4,7 @@ class Product_model extends CI_Model {
 
     public function get() {
         $this->db->select('p.id, p.title, m.name AS menu');
+        $this->db->select('(SELECT COUNT(DISTINCT client_ip) FROM '.TBL_PRODUCT_STATISTICS.' WHERE product_id = p.id) AS visitors', FALSE);
         $this->db->from(TBL_PRODUCTS.' AS p');
         $this->db->join(TBL_MENUS.' AS m', 'm.id = p.menu_id');
         $this->db->where('p.is_deleted', 0);

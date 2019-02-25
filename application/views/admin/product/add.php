@@ -11,7 +11,7 @@
         </div>
         <div class="card-body">
             <?php echo $this->session->flashdata('message'); ?>
-            <form enctype="multipart/form-data" action="<?php echo base_url('admin/products/save'); ?>" method="POST" autocomplete="off">
+            <form id="add_product" enctype="multipart/form-data" action="<?php echo base_url('admin/products/save'); ?>" method="POST" autocomplete="off">
                 <input type="hidden" name="product_id" value="<?php echo isset($row) ? $row['id'] : 0; ?>">
                 <div class="form-group">
                     <label for="email">Select menu:</label>

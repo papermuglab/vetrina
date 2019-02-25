@@ -18,6 +18,7 @@
                         <tr>
                             <th>Name</th>
                             <th>Email</th>
+                            <th>Submitted On</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -25,6 +26,7 @@
                         <tr>
                             <th>Name</th>
                             <th>Email</th>
+                            <th>Submitted On</th>
                             <th>Action</th>
                         </tr>
                     </tfoot>
@@ -33,9 +35,10 @@
                         <tr id="row_<?php echo $inquiry['id']; ?>">
                             <td><?php echo $inquiry['name']; ?></td>
                             <td><?php echo $inquiry['email']; ?></td>
+                            <td><?php echo $inquiry['added_on']; ?></td>
                             <td>
-                                <a href="<?php echo base_url('admin/inquiries/edit/'.$inquiry['id']); ?>" class="btn btn-primary btn-circle btn-sm"><i class="fas fa-eye"></i></a>
-                                <a href="#" onclick="deleteRecord('inquiry', <?php echo $inquiry['id']; ?>)" class="btn btn-danger btn-circle btn-sm"><i class="fas fa-trash"></i></a>
+                                <a href="#" onclick="viewInquiry(<?php echo $inquiry['id']; ?>)" title="View" class="btn btn-primary btn-circle btn-sm"><i class="fas fa-eye"></i></a>
+                                <a href="#" onclick="deleteRecord('inquiry', <?php echo $inquiry['id']; ?>)" title="Delete" class="btn btn-danger btn-circle btn-sm"><i class="fas fa-trash"></i></a>
                             </td>
                         </tr>
                         <?php endforeach; ?>
@@ -46,4 +49,5 @@
     </div>
 
 </div>
+<?php $this->view('admin/inquiry/info-modal'); ?>
 <!-- /.container-fluid -->
