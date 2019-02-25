@@ -7,7 +7,9 @@ class Dashboard extends MY_Controller {
     }
 
     public function index() {
-        $this->backEnd('admin/dashboard/index');
+        $this->load->model('admin/dashboard_model', 'model');
+        $data['row'] = $this->model->getCounts();
+        $this->backEnd('admin/dashboard/index', $data, true);
     }
 
 }

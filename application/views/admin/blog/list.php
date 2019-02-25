@@ -35,6 +35,7 @@
                             <td><?php echo $blog['comments']; ?></td>
                             <td>
                                 <a href="<?php echo base_url('admin/blog/edit/'.$blog['id']); ?>" class="btn btn-primary btn-circle btn-sm"><i class="fas fa-eye"></i></a>
+                                <a href="<?php echo base_url('admin/blog/comments/'.$blog['id']); ?>" class="btn btn-success btn-circle btn-sm"><i class="fas fa-envelope "></i></a>
                                 <a href="#" onclick="deleteRecord('blog', <?php echo $blog['id']; ?>)" class="btn btn-danger btn-circle btn-sm"><i class="fas fa-trash"></i></a>
                             </td>
                         </tr>

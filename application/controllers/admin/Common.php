@@ -20,6 +20,14 @@ class Common extends CI_Controller {
                 $field_name = 'id';
                 $table_name = TBL_BLOGS;
                 break;
+            case 'inquiry':
+                $field_name = 'id';
+                $table_name = TBL_INQUIRIES;
+                break;
+            case 'comment':
+                $field_name = 'id';
+                $table_name = TBL_BLOG_COMMENTS;
+                break;
             default:
                 break;
         }

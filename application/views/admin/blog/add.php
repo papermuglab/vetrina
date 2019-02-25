@@ -11,7 +11,7 @@
         </div>
         <div class="card-body">
             <?php echo $this->session->flashdata('message'); ?>
-            <form enctype="multipart/form-data" action="<?php echo base_url('admin/blog/save'); ?>" method="POST" autocomplete="off">
+            <form id="add_blog" enctype="multipart/form-data" action="<?php echo base_url('admin/blog/save'); ?>" method="POST" autocomplete="off">
                 <input type="hidden" name="blog_id" value="<?php echo isset($row) ? $row['id'] : 0; ?>">
                 <div class="form-group">
                     <label for="email">Title:</label>
@@ -25,10 +25,15 @@
                     <label for="pwd">Select image:</label>
                     <input type="file" class="form-control" placeholder="Enter image" name="image" multiple="true" accept="image/jpeg,image/jpg,image/png">
                 </div>
+                <div class="form-group">
+                    <label for="pwd">Comment should be visible?</label>
+                    <input type="radio" class="" name="is_comment_available" value="1" <?php if(isset($row)){ if($row['is_comment_available'] == 1){ echo 'checked'; } } ?>> Yes
+                    <input type="radio" class="" name="is_comment_available" value="0" <?php if(isset($row)){ if($row['is_comment_available'] == 0){ echo 'checked'; } }else{ echo 'checked'; } ?>> No
+                </div>
                 <?php if (isset($row['image_name']) && !empty($row['image_name'])): ?>
-                        <div class="form-group">
-                            <img src="<?php echo base_url('uploads/blog/' . $row['image_name']); ?>" class="image-size" alt="Responsive image" style="height: 150px; width: 200px;">
-                        </div>
+                    <div class="form-group">
+                        <img src="<?php echo base_url('uploads/blog/' . $row['image_name']); ?>" class="image-size" alt="Responsive image" style="height: 150px; width: 200px;">
+                    </div>
                 <?php endif; ?>
                 <a href="#" class="btn btn-primary btn-icon-split" onclick="history.back();">
                     <span class="icon text-white-50">

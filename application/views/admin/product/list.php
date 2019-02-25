@@ -18,6 +18,7 @@
                         <tr>
                             <th>Product Title</th>
                             <th>Menu</th>
+                            <th>Unique Visitors</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -25,6 +26,7 @@
                         <tr>
                             <th>Title</th>
                             <th>Menu</th>
+                            <th>Unique Visitors</th>
                             <th>Action</th>
                         </tr>
                     </tfoot>
@@ -33,6 +35,7 @@
                         <tr id="row_<?php echo $product['id']; ?>">
                             <td><?php echo $product['title']; ?></td>
                             <td><?php echo $product['menu']; ?></td>
+                            <td><?php echo $product['visitors']; ?></td>
                             <td>
                                 <a href="<?php echo base_url('admin/products/edit/'.$product['id']); ?>" class="btn btn-primary btn-circle btn-sm"><i class="fas fa-eye"></i></a>
                                 <a href="#" onclick="deleteRecord('product', <?php echo $product['id']; ?>)" class="btn btn-danger btn-circle btn-sm"><i class="fas fa-trash"></i></a>
