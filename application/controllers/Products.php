@@ -7,7 +7,10 @@ class Products extends MY_Controller {
     }
 
     public function index() {
-        $this->backEnd('');
+        $this->load->view('front/product/list');
     }
 
+    public function detail() {
+        $this->load->view('front/product/detail');
+    }
 }
