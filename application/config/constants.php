@@ -96,3 +96,6 @@ defined('TBL_PRODUCT_IMAGES') OR define('TBL_PRODUCT_IMAGES', 'product_images');
 defined('TBL_PRODUCT_STATISTICS') OR define('TBL_PRODUCT_STATISTICS', 'product_statistics');
 defined('TBL_BLOG_COMMENTS') OR define('TBL_BLOG_COMMENTS', 'blog_comments');
 defined('TBL_INQUIRIES') OR define('TBL_INQUIRIES', 'inquiries');
+
+// Admin details
+defined('ADMIN_EMAIL') OR define('ADMIN_EMAIL', 'hamzakt69@gmail.com');

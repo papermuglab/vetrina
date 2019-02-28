@@ -3,8 +3,6 @@
 function sendEmail($email, $type, $data) {
     $CI = & get_instance();
     $content = content($type, $data);
-    echo '<pre>';
-    print_r($content);die();
     $CI->load->library('email');
     $CI->email->set_mailtype("html");
     $CI->load->library('email');
@@ -27,7 +25,7 @@ function sendEmail($email, $type, $data) {
     $theme .= '<table border="0" cellpadding="0px" cellspacing="0px" width="600">';
     $theme .= '<tbody>';
     $theme .= '<tr>';
-    $theme .= '<td bgcolor="#FFFFFF" style="border-radius:0px 0px 3px 3px;color:#777777;font-family:Helvetica,Arial,sans-serif;font-size:16px;line-height:25px;padding:30px 50px 35px 50px"><span style="color:#222222;font-family:Helvetica,Arial,sans-serif;font-size:32px">' . $subject . '</span><br><br>';
+    $theme .= '<td bgcolor="#FFFFFF" style="border-radius:0px 0px 3px 3px;color:#777777;font-family:Helvetica,Arial,sans-serif;font-size:16px;line-height:25px;padding:30px 50px 35px 50px"><span style="color:#222222;font-family:Helvetica,Arial,sans-serif;font-size:32px">' . $content['subject'] . '</span><br><br>';
     $theme .= $content['message'];
     $theme .= '<br><br>Thanks,';
     $theme .= '<br>' . PROJECT_NAME . ' Team</td>';
@@ -63,15 +61,11 @@ function content($type, $data) {
             $table .= '<tr><td>Name: </td><td>' . $data['name'] . '</td></tr>';
             $table .= '<tr><td>Email: </td><td>' . $data['email'] . '</td></tr>';
             $table .= '<tr><td>Mobile: </td><td>' . $data['mobile'] . '</td></tr>';
-            $table .= '<tr><td>Product Name: </td><td>' . $data['product_name'] . '</td></tr>';
+            $table .= '<tr><td>Message: </td><td>' . $data['message'] . '</td></tr>';
             $table .= '</table>';
-            $params['message'] = '<p>We found new inquiry for <strong>' . $data['product_name'] . '</strong>.</p>';
+            $params['message'] = '<p>We found new inquiry.</p>';
             $params['message'] .= '<p>Below details of user.</p>';
             $params['message'] .= $table;
-            break;
-        case 2: // Inquiry to Customer
-            $params['subject'] = 'We got your Inquiry.';
-            $params['message'] = '<p>Thank you so much for your time. We got your inquiry about ' . $data['product_name'] . ', our representative will contact you within 24 Hours.</p>';
             break;
         default:
             break;
