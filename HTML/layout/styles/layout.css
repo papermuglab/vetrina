@@ -161,6 +161,15 @@ File: Layout CSS
 	color: #a3228e;
 }
 
+.footer_menus { margin: 0; padding: 0; }
+.footer_menus li { margin: 0; padding: 0 0 10px; display: inline-block; width: 45%; }
+.footer_menus li a { color: #3d3d3d; font-weight: 500; }
+
+.socialFooter h5 { font-size: 22px; font-weight: 500; margin-bottom: 10px }
+.socialIcons { margin: 0; padding: 0; }
+.socialIcons li { margin: 0; padding: 0 10px 10px 0; display: inline;  }
+.socialIcons li a { color: #3d3d3d; font-weight: 500; font-size: 30px }
+
 /* Transition Fade
 This gives a smooth transition to "ALL" elements used in the layout - other than the navigation form used in mobile devices
 If you don't want it to fade all elements, you have to list the ones you want to be faded individually
