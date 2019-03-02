@@ -34,7 +34,7 @@ File: Layout CSS
 
 /* Header
 --------------------------------------------------------------------------------------------------------------- */
-#header{padding:50px 0;}
+#header{padding:20px 0;}
 
 #header #logo *{margin:0; padding:0; line-height:1;}
 #header #logo h1{margin-top:8px; font-size:24px;}
@@ -49,13 +49,13 @@ File: Layout CSS
 
 /* Page Intro
 --------------------------------------------------------------------------------------------------------------- */
-#pageintro{padding:250px 0;}
+#pageintro{padding:170px 0 0;}
 
 #pageintro li article{display:block; max-width:75%; padding-bottom:10px; overflow:hidden;}
 #pageintro li article *{word-wrap:break-word;}
 #pageintro li .heading{margin-bottom:20px; font-size:3rem;}
 #pageintro li p:first-of-type{margin:0 0 20px 0; text-transform:uppercase; font-weight:400; font-size:1.2rem; letter-spacing:5px;}
-#pageintro li footer{margin-top:50px;}
+#pageintro li footer{margin-top:0;}
 
 #pageintro .flex-prev, #pageintro .flex-next{opacity:0;}
 #pageintro:hover .flex-prev, #pageintro:hover .flex-next{opacity:.5;}
@@ -66,7 +66,7 @@ File: Layout CSS
 
 /* Content Area
 --------------------------------------------------------------------------------------------------------------- */
-.container{padding:80px 0;}
+.container{padding:30px 0;}
 
 /* Content */
 .container .content{}
@@ -141,6 +141,26 @@ File: Layout CSS
 #copyright *{margin:0; padding:0;}
 
 
+.testimonialHome {
+	max-width: 505px;
+	margin: 0 auto;
+	text-align: center;
+	font-family: Georgia, "Times New Roman", Times, serif ;
+	font-size: 20px;
+	line-height: 36px;
+	font-style: italic;
+}
+.footer {}
+.footer h5{ font-family: 'Libre Franklin', sans-serif;  }
+.clientName { font-size: 16px; margin: 30px 0 0 0; text-align: center;  }
+.socialIcons { margin: 0; padding: 0;  }
+.socialIcons li { margin: 0; padding: 0; display: inline-block;  }
+
+.homeH3 {
+	font-size: 32px;
+	color: #a3228e;
+}
+
 /* Transition Fade
 This gives a smooth transition to "ALL" elements used in the layout - other than the navigation form used in mobile devices
 If you don't want it to fade all elements, you have to list the ones you want to be faded individually
@@ -166,10 +186,10 @@ nav ul, nav ol{margin:0; padding:0; list-style:none;}
 
 /* Top Navigation */
 #mainav{position:relative; margin-bottom:-30px; padding:0; z-index:999;}
-#mainav ul{text-transform:uppercase;}
+#mainav ul{text-transform:uppercase; text-align: center}
 #mainav ul ul{z-index:9999; position:absolute; width:180px; text-transform:none; text-align:left;}
 #mainav ul ul ul{left:180px; top:0;}
-#mainav li{display:block; float:left; position:relative; margin:0; padding:0;}
+#mainav li{display:inline-block; text-align: center; position:relative; margin:0; padding:0;}
 #mainav li:last-child{margin-right:0;}
 #mainav li li{width:100%; margin:0;}
 #mainav li a{display:block; padding:20px;}
@@ -177,7 +197,7 @@ nav ul, nav ol{margin:0; padding:0; list-style:none;}
 #mainav .drop{padding-left:15px;}
 #mainav li li a, #mainav li li .drop{display:block; margin:0; padding:10px 15px;}
 #mainav .drop::after, #mainav li li .drop::after{content:"\f0d7";}
-#mainav .drop::after{top:25px; left:5px;}
+#mainav .drop::after{top:25px; right:5px;}
 #mainav li li .drop::after{top:15px; left:5px;}
 #mainav ul ul{visibility:hidden; opacity:0;}
 #mainav ul li:hover > ul{visibility:visible; opacity:1;}
@@ -306,9 +326,9 @@ input:focus, textarea:focus, *:required:focus{border-color:#56AED4;}
 
 
 /* Navigation */
-#mainav{color:#FFFFFF; background-color:#629BAF;}
-#mainav li a{color:inherit;}
-#mainav .active a, #mainav a:hover, #mainav li:hover > a{color:#2B4953; background-color:inherit;}
+#mainav{color:#FFFFFF; background-color:#a3228e;}
+#mainav li a{color:inherit; font-weight: 500}
+#mainav .active a, #mainav a:hover, #mainav li:hover > a{color:#ffffff; background-color:inherit;}
 #mainav li li a, #mainav .active li a{color:#FFFFFF; background-color:rgba(98,155,175,.5);/* #629BAF */ border-color:rgba(0,0,0,.6);}
 #mainav li li:hover > a, #mainav .active .active > a{color:#FFFFFF; background-color:#629BAF;}
 #mainav form select{color:#4A4A4A; background-color:#FFFFFF;}
@@ -324,7 +344,8 @@ input:focus, textarea:focus, *:required:focus{border-color:#56AED4;}
 .pagination .current *{color:#FFFFFF; background-color:#629BAF;}
 
 #backtotop{color:#FFFFFF; background-color:#629BAF;}
-
+.footer .container { padding-bottom: 0;  }
+.copyright{ border-top: 1px solid #c8c8c8; }
 
 /* Tables + Comments */
 table, th, td, #comments .avatar, #comments input, #comments textarea{border-color:#D7D7D7;}
@@ -334,7 +355,11 @@ tr, #comments li, #comments input[type="submit"], #comments input[type="reset"]{
 tr:nth-child(even), #comments li:nth-child(even){color:inherit; background-color:#F7F7F7;}
 table a, #comments a{background-color:inherit;}
 
-
+.productsHome { margin: 0; padding: 0; text-align: center; }
+.productsHome li { margin: 0 30px 0 0; padding: 0; display: inline-block; border-radius: 10px; box-shadow: 0 0 30px #c8c8c8; }
+.productsHome li:last-child { margin-right: 0; }
+.productsHome li a { display: block; height: 159px; width: 159px; border: 5px solid #fff; border-radius: 10px; }
+.productsHome li a:hover { border: 5px solid #c8c8c8; box-sizing: border-box; }
 /* ------------------------------------------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------------------------------------------ */
