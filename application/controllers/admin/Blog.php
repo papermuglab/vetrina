@@ -30,9 +30,10 @@ class Blog extends MY_Controller {
         $params['description'] = $this->input->post('editor1');
         $params['is_comment_available'] = $this->input->post('is_comment_available');
         $params['permalink'] = createPermaLink($params['title']);
-        if (!empty($_FILES['image']['name'])) {
-            $params['image_name'] = uploadBanner('image');
-        }
+        $params['is_deleted'] = 0;
+//        if (!empty($_FILES['image']['name'])) {
+//            $params['image_name'] = uploadBanner('image');
+//        }
         if (empty($blog_id)) { // Add Product
             $result = $this->dml->insert(TBL_BLOGS, $params);
         } else {// Update Product
@@ -76,6 +77,24 @@ class Blog extends MY_Controller {
         }
         $this->session->set_flashdata('message', $message);
         redirect(base_url('admin/blog/comments/' . $activeBlog));
+    }
+
+    public function uploadImage() {
+        $blogId = $this->input->post('blog_id');
+        $image = $this->input->post('image');
+        $imageArr = explode(";", $image);
+        $encodedImage = explode(",", $imageArr[1]);
+        $fileName = date('YmdHis') . '.png';
+        $filePath = $_SERVER['DOCUMENT_ROOT'] . '/vetrina/uploads/blog/' . $fileName;
+        file_put_contents($filePath, base64_decode($encodedImage[1]));
+        $params['image_name'] = $fileName;
+        if (!empty($blogId)) { // Update
+            $result = $this->dml->update(TBL_BLOGS, 'id', $blogId, $params);
+        } else { // Insert
+            $params['is_deleted'] = 1;
+            $result = $this->dml->insert(TBL_BLOGS, $params);
+        }
+        echo $result['id'];
     }
 
 }

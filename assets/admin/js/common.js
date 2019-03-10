@@ -1,5 +1,48 @@
 $(document).ready(function () {
     CKEDITOR.replace('editor1');
+    $image_crop = $('#image_demo').croppie({
+        enableExif: true,
+        viewport: {
+            width: 500,
+            height: 300,
+            type: 'square' //circle
+        },
+        boundary: {
+            width: 700,
+            height: 500
+        }
+    });
+
+    $('#image_upload_attr').on('change', function () {
+        var reader = new FileReader();
+        reader.onload = function (event) {
+            $image_crop.croppie('bind', {
+                url: event.target.result
+            }).then(function () {
+                console.log('jQuery bind complete');
+            });
+        }
+        reader.readAsDataURL(this.files[0]);
+        $('#uploadimageModal').modal('show');
+    });
+    $('.crop_image').click(function (event) {
+        $image_crop.croppie('result', {
+            type: 'canvas',
+            size: 'viewport'
+        }).then(function (response) {
+            var blog_id = $("#blog_id").val();
+            $.ajax({
+                url: base_url + '/blog/uploadImage',
+                type: "POST",
+                data: {image: response, blog_id: blog_id},
+                success: function (data)
+                {
+                    $("#blog_id").val(data);
+                    $('#uploadimageModal').modal('hide');
+                }
+            });
+        })
+    });
 });
 function deleteRecord(type, record_id) {
     if (confirm("Are you sure?")) {

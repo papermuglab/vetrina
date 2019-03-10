@@ -12,7 +12,7 @@
         <div class="card-body">
             <?php echo $this->session->flashdata('message'); ?>
             <form id="add_blog" enctype="multipart/form-data" action="<?php echo base_url('admin/blog/save'); ?>" method="POST" autocomplete="off">
-                <input type="hidden" name="blog_id" value="<?php echo isset($row) ? $row['id'] : 0; ?>">
+                <input type="hidden" name="blog_id" id="blog_id" value="<?php echo isset($row) ? $row['id'] : 0; ?>">
                 <div class="form-group">
                     <label for="email">Title:</label>
                     <input type="text" class="form-control" placeholder="Enter title" name="title" id="title" value="<?php if(isset($row)){ echo $row['title']; } ?>">
@@ -23,7 +23,7 @@
                 </div>
                 <div class="form-group">
                     <label for="pwd">Select image:</label>
-                    <input type="file" class="form-control" placeholder="Enter image" name="image" multiple="true" accept="image/jpeg,image/jpg,image/png">
+                    <input type="file" class="form-control" placeholder="Enter image" name="image" id="image_upload_attr" multiple="true" accept="image/jpeg,image/jpg,image/png">
                 </div>
                 <div class="form-group">
                     <label for="pwd">Comment should be visible?</label>
@@ -53,3 +53,4 @@
 
 </div>
 <!-- /.container-fluid -->
+<?php $this->view('admin/blog/crop-modal'); ?>

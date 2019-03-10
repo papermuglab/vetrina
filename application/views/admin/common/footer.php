@@ -45,6 +45,7 @@
 </script>
 <!-- Bootstrap core JavaScript-->
 <script src="<?php echo base_url('assets/admin/'); ?>vendor/jquery/jquery.min.js"></script>
+<script src="<?php echo base_url('assets/admin/'); ?>js/croppie.js"></script>
 <script src="<?php echo base_url(); ?>/assets/admin/js/jquery.validate.js"></script>
 <script src="<?php echo base_url('assets/admin/'); ?>vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
