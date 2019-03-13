@@ -11,7 +11,6 @@ $(document).ready(function () {
             });
         }, 'json');
     });
-    CKEDITOR.replace('editor1');
 });
 function deleteRecord(type, record_id) {
     if (confirm("Are you sure?")) {
