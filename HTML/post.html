@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="shortcut icon" type="image/icon" href="images/favicon.png"/>
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Vetrina | Home</title>
     <!-- Bootstrap -->
@@ -15,20 +16,20 @@
 
   </head>
   <body>
-    <div class="container">
+   <div class="container">
       <div class="header clearfix">
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-          <a href="Javascript:void(0);" class="logo"><img src="images/vetrina-logo.jpg" alt="Vetrina Logo"></a>
+          <a href="index.html" class="logo"><img src="images/vetrina-logo.jpg" alt="Vetrina Logo"></a>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12"></div>
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 iconSocial">
           <ul>
-            <li><a href="https://www.facebook.com/VetrinaAnimalHealth">f</a></li>
-            <li><a href="https://twitter.com/mangesh1611?s=09">t</a></li>
-            <li><a href="javascript:void(0);">n</a></li>
-            <li><a href="https://www.instagram.com/vetrinahealthcare/?hl=en">l</a></li>
-            <li><a href="javascript:void(0);">y</a></li>
-            <li><a href="javascript:void(0);" data-toggle="modal" data-target="#myModal"></a></li>
+            <li><a href="https://www.facebook.com/VetrinaAnimalHealth" target="_blank"><img src="images/icons/facebook.jpg"></a></li>
+            <li><a href="https://twitter.com/mangesh1611?s=09" target="_blank"><img src="images/icons/twitter.jpg"></a></li>
+            <!-- <li><a href="javascript:void(0);" target="_black"><img src="images/icons/linkedin.jpg"></a></li> -->
+            <li><a href="https://www.instagram.com/vetrinahealthcare/?hl=en" target="_blank"><img src="images/icons/insta.jpg"></a></li>
+            <!-- <li><a href="javascript:void(0);" target="_blank"><img src="images/icons/youtube.png"></a></li> -->
+            <li><a href="javascript:void(0);" data-toggle="modal" data-target="#myModal" target="_blank"></a></li>
           </ul>
         </div>
       </div>
@@ -37,7 +38,7 @@
     <div class="container-fluid" id="myHeader">
       <div class="row">
         <nav class="navbar navbar-inverse">
-          <div class="container">
+          <div class="">
             <div class="navbar-header">
               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
               <span class="sr-only">Toggle navigation</span>
@@ -61,7 +62,7 @@
                       <li><a href="products/sheep.html">Goat/Sheep</a></li>
                     </ul>
                 </li>
-                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="blogs.html" class="active">Blogs</a></li>
                 <li><a href="career.html">Career</a></li>
                 <li><a href="contact-us.html">Contact Us</a></li>
               </ul>
@@ -183,44 +184,48 @@
         <div class="col-lg-2"></div>
       </div>
     </div><!-- /.container -->
-        
-      <div class="footer">
+    
+    <div class="footer">
         <div class="container">
-          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 footerAddress">
-            <h3>Address:</h3> 
-            1, Unique Tower, Chandrabhaga Nagar,<br> Katraj Dairy Road, Katraj, 411046<br />
-            E-Mail: info@vetrinahealthcare.com<br />
-            Website:www.vetrinahealthcare.com 
-          </div>
-          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 navigation">
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about-us.html">About Us</a></li>
-              <li><a href="javascript:void(0);">Products</a></li>
-              <li><a href="blogs.html">Blogs</a></li>
-              <li><a href="career.html">Career</a></li>
-              <li><a href="contact-us.html">Contact</a></li>
-              <li><a href="javascript:void(0);">Privacy Policy</a></li>
-              <li><a href="javascript:void(0);">Terms &amp; Conditions</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-            <div class="iconSocial">
-              <ul> 
-                <li><a href="https://www.facebook.com/VetrinaAnimalHealth">f</a></li>
-                <li><a href="https://twitter.com/mangesh1611?s=09">t</a></li>
-                <li><a href="javascript:void(0);">n</a></li>
-                <li><a href="https://www.instagram.com/vetrinahealthcare/?hl=en">l</a></li>
-                <li><a href="javascript:void(0);">y</a></li>
-                <!-- <li><a href="javascript:void(0);"></a></li> -->
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 footerAddress">
+              <h3>Address:</h3> 
+              1, Unique Tower, Chandrabhaga Nagar,<br> Katraj Dairy Road, Katraj, 411046<br />
+              E-Mail: info@vetrinahealthcare.com<br />
+              Website:www.vetrinahealthcare.com <br /><br />
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 navigation">
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="index.html#products">Products</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="career.html">Career</a></li>
+                <li><a href="contact-us.html">Contact</a></li>            
               </ul>
             </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+              <div class="iconSocial">
+                <ul>
+                  <li><a href="https://www.facebook.com/VetrinaAnimalHealth" target="_blank"><img src="images/icons/facebook.jpg"></a></li>
+                  <li><a href="https://twitter.com/mangesh1611?s=09" target="_blank"><img src="images/icons/twitter.jpg"></a></li>
+                  <!-- <li><a href="javascript:void(0);" target="_black"><img src="images/icons/linkedin.jpg"></a></li> -->
+                  <li><a href="https://www.instagram.com/vetrinahealthcare/?hl=en" target="_blank"><img src="images/icons/insta.jpg"></a></li>
+                  <!-- <li><a href="javascript:void(0);" target="_blank"><img src="images/icons/youtube.png"></a></li>  -->
+                </ul>
+              </div>
+            </div>
           </div>
-          <div id="copyright" class="col-md-12 copyright">
-            <p class="text-center"> Copyright &copy; 2019 Vetrina Healthcare Pvt. Ltd.</p>
+          <div id="copyright" class="row copyright">
+            <div class="col-md-6">
+              <p class="text-right"> Copyright &copy; 2019 </p> 
+            </div>
+            <div class="col-md-6">
+              <p class="text-left"><span class="company_name"> Vetrina Healthcare Pvt. Ltd.</span></p>
+            </div>
           </div>
         </div>
-      </div>
+    </div>      
       <!-- Modal -->
       <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
@@ -233,7 +238,8 @@
               <div class="input-group input-group-lg">
                 <input type="text" class="form-control" placeholder="Search for...">
                 <span class="input-group-btn">
-                  <button class="btn btn-default" type="button">Search</button>
+                  <!-- <button class="btn btn-default" type="button">Search</button> -->
+                  <a href="products/search.html" class="btn btn-default" type="button">Search</a>
                 </span>
               </div><!-- /input-group -->
             </div>
