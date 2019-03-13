@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="shortcut icon" type="image/icon" href="../images/favicon.png"/>
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Vetrina | Home</title>
     <!-- Bootstrap -->
@@ -24,20 +25,20 @@
   </head>
   <body>
 
-      <div class="container">
+     <div class="container">
         <div class="header clearfix">
           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-            <a href="Javascript:void(0);" class="logo"><img src="../images/vetrina-logo.jpg" alt="Vetrina Logo"></a>
+            <a href="../index.html" class="logo"><img src="../images/vetrina-logo.jpg" alt="Vetrina Logo"></a>
           </div>
           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12"></div>
           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 iconSocial">
             <ul>
-              <li><a href="https://www.facebook.com/VetrinaAnimalHealth">f</a></li>
-              <li><a href="https://twitter.com/mangesh1611?s=09">t</a></li>
-              <li><a href="javascript:void(0);">n</a></li>
-              <li><a href="https://www.instagram.com/vetrinahealthcare/?hl=en">l</a></li>
-              <li><a href="javascript:void(0);">y</a></li>
-              <li><a href="javascript:void(0);" data-toggle="modal" data-target="#myModal"></a></li>
+                <li><a href="https://www.facebook.com/VetrinaAnimalHealth" target="_blank"><img src="../images/icons/facebook.jpg"></a></li>
+                <li><a href="https://twitter.com/mangesh1611?s=09" target="_blank"><img src="../images/icons/twitter.jpg"></a></li>
+                <!-- <li><a href="javascript:void(0);" target="_black"><img src="../images/icons/linkedin.jpg"></a></li> -->
+                <li><a href="https://www.instagram.com/vetrinahealthcare/?hl=en" target="_blank"><img src="../images/icons/insta.jpg"></a></li>
+                <!-- <li><a href="javascript:void(0);" target="_blank"><img src="../images/icons/youtube.png"></a></li> -->
+                <li><a href="javascript:void(0);" data-toggle="modal" data-target="#myModal" target="_blank"></a></li>
             </ul>
           </div>
         </div>
@@ -46,7 +47,7 @@
       <div class="container-fluid" id="myHeader">
         <div class="row">
           <nav class="navbar navbar-inverse">
-            <div class="container">
+            <div class="">
               <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>
@@ -60,12 +61,12 @@
                   <li><a href="../index.html">Home</a></li>
                   <li><a href="../about-us.html">About Us</a></li>
                   <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Products <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Products <span class="caret"></span></a>
                      <ul class="dropdown-menu">
                       <li><a href="cattle.html">Cattle</a></li>
                       <li><a href="poultry.html">Poultry</a></li>
                       <li><a href="companian_animal.html">Companion Animal</a></li>
-                      <li><a href="exotic_animal.html">Exotic Animals</a></li>
+                      <li><a href="exotic_animal.html" class="active">Exotic Animals</a></li>
                       <li><a href="swine.html">Swine</a></li>
                       <li><a href="sheep.html">Goat/Sheep</a></li>
                     </ul>
@@ -83,101 +84,103 @@
     <div class="container-fluid">
       <div class="row"> 
         <div class="container">      
-          <div class="col-md-12">
-            <div class="bannerSlide birdBanner">
-            </div>
+          <div class="col-md-6">
+            <div class="companianBanner">
+              <img src="../images/products/exotic_animal.jpg">
+            </div>           
+          </div>
+          <div class="col-md-6">
+            <p class="animal_info"> 
+              Everybody wants to have brilliantly coloured and highly intelligent exotic birds as pets. But caring for these captivating creatures is no mean feat. Birds have different temperaments and social needs. They require gentle care; protection from germs, pollution and also a balanced diet that includes more than just seeds to maintain their health, enchanting colours and quirky personalities.
+              <br />
+              <span class="company_name">Vetrina</span> Exotic brings to you a complete healthcare range for all aviary birds and other delicate exotic pets. Our products can be given as supportive therapy to control and prevent a myriad of health problems in not just birds but in other exotic pets.  
+            </p>            
           </div>
         </div>
       </div>
     </div><!-- /.container -->
 
-    <section class="container-fluid">
-      <div class="row"> 
-        <div class="container">      
-          <div class="col-md-12">
-            <h3>Generating Tomorrow's Solution Today...</h3>
-            <p> At Vetrina Healthcare, we provide complete nutritional solutions from calf to cow   and cow to calf for optimum productivity, fertility and health at different stages.
-
-              Our nutritional products provide optimum levels of nutrient at different stages as per the need of animals, which helps in controlling critical issues like mastitis, infertility and metabolic disorders. Prevention of these critical issues through nutritional management is the right solution for tomorrow’s challenge.
-
-              Vetrina Healthcare has a comprehensive approach to providing solutions for livestock farmers. It is this distinctive approach that differentiates us from just the animal health product suppliers and makes us your reliable go-to resource.</p>
-            
-          </div>
-        </div>
-      </div>
-    </section><!-- /.container -->
+  
      <section class="container-fluid"> 
       <div class="row"> 
+          <div class="col-md-2"></div>
           <div class="col-md-4">
             <div class="product_item">
               <div class="item-title">
-                <h3>title</h3>
+                <h3>Feed Supplements</h3>
              </div>
              <div class="item-detail">
-              <p>Info Stage Nutrition</p>
-                <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p> -->
+              <p>Nutritional solutions to combat deficiency diseases; assist recovery from illness and for maintaining all round health, vigour and vitality in your pets.</p>
+              <a href="product_list.html" class="w3-display-bottomright btn btn-primary">Products</a>
              </div>
            </div>
           </div>
-          <div class="col-md-4">
+         <!--  <div class="col-md-4">
             <div class="product_item">
               <div class="item-title">
-                <h3>title</h3>
+                <h3>System Specialty</h3>
              </div>
              <div class="item-detail">
-              <p>Info Clinical Nutrition</p>
-                <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p> -->
+              <p>Managing metabolic and infectious diseases is a complex process. Using synergistic combination of natural botanical extracts and critical micro-nutrient supplementation, our system specialty Vetricare products provide a comprehensive solution to various debilitating disease conditions and increase quality of your pet’s life. Vetricare products can be used as an adjunct to conventional therapy or given as regular supplements to maintain healthy body systems. </p>
+              <a href="product_list.html" class="w3-display-bottomright btn btn-primary">Products</a>
              </div>
            </div>
-          </div>
+          </div> -->
           <div class="col-md-4">
-            <div class="product_item">
+            <div class="product_item ">
               <div class="item-title">
-                <h3>title</h3>
+                <h3>Bio-security</h3>
              </div>
              <div class="item-detail">
-              <p>Info Biosecurity</p>
-              <a href="product_list.html" class="">More...</a>
-               <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p> -->
-             </div>
+              <p>Cage cleaning and disinfection is the first step in protecting your pet bird from infections and parasites. With many birds housed together, regular decontamination is critical to stop spread of infections. Prepared from potent and non-toxic ingredients, our products sanitize, deodorize and leave the cages smelling naturally fresh. </p>
+              <a href="product_list.html" class="w3-display-bottomright btn btn-primary">Products</a>
+            </div>
            </div>
           </div>
+          <div class="col-md-2"></div>
       </div>
     </section><!-- /.container -->       
-      <div class="footer">
+    
+    <div class="footer">
         <div class="container">
-          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 footerAddress">
-            <h3>Address:</h3> 
-            1, Unique Tower, Chandrabhaga Nagar,<br> Katraj Dairy Road, Katraj, 411046<br />
-            E-Mail: info@vetrinahealthcare.com<br />
-            Website:www.vetrinahealthcare.com 
-          </div>
-          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 navigation">
-            <ul>
-              <li><a href="../index.html">Home</a></li>
-              <li><a href="../about-us.html">About Us</a></li>
-              <li><a href="javascript:void(0);">Products</a></li>
-              <li><a href="../blogs.html">Blogs</a></li>
-              <li><a href="../career.html">Career</a></li>
-              <li><a href="../contact-us.html">Contact</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-            <div class="iconSocial">
-              <ul> 
-                <li><a href="https://www.facebook.com/VetrinaAnimalHealth">f</a></li>
-                <li><a href="https://twitter.com/mangesh1611?s=09">t</a></li>
-                <li><a href="javascript:void(0);">n</a></li>
-                <li><a href="https://www.instagram.com/vetrinahealthcare/?hl=en">l</a></li>
-                <li><a href="javascript:void(0);">y</a></li>
-                <!-- <li><a href="javascript:void(0);"></a></li> -->
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 footerAddress">
+              <h3>Address:</h3> 
+              1, Unique Tower, Chandrabhaga Nagar,<br> Katraj Dairy Road, Katraj, 411046<br />
+              E-Mail: info@vetrinahealthcare.com<br />
+              Website:www.vetrinahealthcare.com<br /><br />
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 navigation">
+              <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about-us.html">About Us</a></li>
+                <li><a href="../index.html#products">Products</a></li>
+                <li><a href="../blogs.html">Blogs</a></li>
+                <li><a href="../career.html">Career</a></li>
+                <li><a href="../contact-us.html">Contact</a></li>              
               </ul>
             </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+              <div class="iconSocial">
+                <ul>
+                  <li><a href="https://www.facebook.com/VetrinaAnimalHealth" target="_blank"><img src="../images/icons/facebook.jpg"></a></li>
+                  <li><a href="https://twitter.com/mangesh1611?s=09" target="_blank"><img src="../images/icons/twitter.jpg"></a></li>
+                  <!-- <li><a href="javascript:void(0);" target="_black"><img src="../images/icons/linkedin.jpg"></a></li> -->
+                  <li><a href="https://www.instagram.com/vetrinahealthcare/?hl=en" target="_blank"><img src="../images/icons/insta.jpg"></a></li>
+                  <!-- <li><a href="javascript:void(0);" target="_blank"><img src="../images/icons/youtube.png"></a></li> -->
+              </ul>
+              </div>
+            </div>
           </div>
-          <div id="copyright" class="col-md-12 copyright">
-            <p class="text-center"> Copyright &copy; 2019 Vetrina Healthcare Pvt. Ltd.</p>
+
+          <div id="copyright" class="row copyright">
+            <div class="col-md-6">
+              <p class="text-right"> Copyright &copy; 2019 </p> 
+            </div>
+            <div class="col-md-6">
+              <p class="text-left"><span class="company_name"> Vetrina Healthcare Pvt. Ltd.</span></p>
+            </div>
           </div>
-        </div>
       </div>
       <!-- Modal -->
       <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -191,7 +194,8 @@
               <div class="input-group input-group-lg">
                 <input type="text" class="form-control" placeholder="Search for...">
                 <span class="input-group-btn">
-                  <button class="btn btn-default" type="button">Search</button>
+                  <!-- <button class="btn btn-default" type="button">Search</button> -->
+                  <a href="search.html" class="btn btn-default" type="button">Search</a>
                 </span>
               </div><!-- /input-group -->
             </div>

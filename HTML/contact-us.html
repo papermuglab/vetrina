@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="shortcut icon" type="image/icon" href="images/favicon.png"/>
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Vetrina | Home</title>
     <!-- Bootstrap -->
@@ -23,20 +24,20 @@
     <![endif]-->
   </head>
   <body>
-    <div class="container">
+   <div class="container">
       <div class="header clearfix">
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-          <a href="Javascript:void(0);" class="logo"><img src="images/vetrina-logo.jpg" alt="Vetrina Logo"></a>
+          <a href="index.html" class="logo"><img src="images/vetrina-logo.jpg" alt="Vetrina Logo"></a>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12"></div>
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 iconSocial">
           <ul>
-            <li><a href="https://www.facebook.com/VetrinaAnimalHealth">f</a></li>
-            <li><a href="https://twitter.com/mangesh1611?s=09">t</a></li>
-            <li><a href="javascript:void(0);">n</a></li>
-            <li><a href="https://www.instagram.com/vetrinahealthcare/?hl=en">l</a></li>
-            <li><a href="javascript:void(0);">y</a></li>
-            <li><a href="javascript:void(0);" data-toggle="modal" data-target="#myModal"></a></li>
+            <li><a href="https://www.facebook.com/VetrinaAnimalHealth" target="_blank"><img src="images/icons/facebook.jpg"></a></li>
+            <li><a href="https://twitter.com/mangesh1611?s=09" target="_blank"><img src="images/icons/twitter.jpg"></a></li>
+            <!-- <li><a href="javascript:void(0);" target="_black"><img src="images/icons/linkedin.jpg"></a></li> -->
+            <li><a href="https://www.instagram.com/vetrinahealthcare/?hl=en" target="_blank"><img src="images/icons/insta.jpg"></a></li>
+            <!-- <li><a href="javascript:void(0);" target="_blank"><img src="images/icons/youtube.png"></a></li> -->
+            <li><a href="javascript:void(0);" data-toggle="modal" data-target="#myModal" target="_blank"></a></li>
           </ul>
         </div>
       </div>
@@ -45,7 +46,7 @@
     <div class="container-fluid" id="myHeader">
       <div class="row">
         <nav class="navbar navbar-inverse">
-          <div class="container">
+          <div class="">
             <div class="navbar-header">
               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
               <span class="sr-only">Toggle navigation</span>
@@ -71,7 +72,7 @@
                 </li>
                 <li><a href="blogs.html">Blogs</a></li>
                 <li><a href="career.html">Career</a></li>
-                <li><a href="contact-us.html">Contact Us</a></li>
+                <li><a href="contact-us.html" class="active">Contact Us</a></li>
               </ul>
             </div><!--/.nav-collapse -->
           </div>
@@ -88,7 +89,7 @@
                 <p><b>ADDRESS:</b> <br>
                   1, Unique Tower, Chandrabhaga Nagar, Katraj Dairy Road, Katraj, 411046<br /></p>
                 <p><b>E-Mail:</b> <br> info@vetrinahealthcare.com<br /></p>
-                <p><b>Websit:</b> <br>www.vetrinahealthcare.com </p>
+                <p><b> Contact No.</b> <br>+91 8600844450</p>
               </div>
             </div>
           </div>
@@ -123,55 +124,70 @@
                 </form>
             </div>
           </div>
-          <div class="col-md-12">
-            <div class="form_container">
-              <div class="mapouter">
-                <div class="gmap_canvas">
-                  <iframe width="1218" height="397" id="gmap_canvas" src="https://maps.google.com/maps?q=Vetrina%20Healtcare%20Pvt.Ltd%2C%20Katraj%20Dairy%20Road%2C%20Chandrabhaga%20Chowk%2C%2C%20Shriram%20Nagar%2C%20Dhankawadi%2C%20Pune%2C%20Maharashtra%20411046%2C%20India&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                  <a href="https://www.pureblack.de">web designer</a>
+        </div>
+      </div><!-- /.container -->
+      <div class="row w3-margin-bottom"> 
+        <div class="container">   
+          <span id="mobile_map">
+            <div class="col-md-6">
+              <div class="mapouter"><div class="gmap_canvas"><iframe width="300" height="300" id="gmap_canvas" src="https://maps.google.com/maps?q=vetrina&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.pureblack.de">pureblack.de</a></div><style>.mapouter{text-align:right;height:300px;width:300px;}.gmap_canvas {overflow:hidden;background:none!important;height:300px;width:300px;}</style></div>
+            </div>
+          </span>
+          <span id="dextop_map">
+            <div class="col-md-12">
+              <div class="form_container">
+                <div class="mapouter">
+                  <div class="gmap_canvas">
+                    <iframe width="1218" height="397" id="gmap_canvas" src="https://maps.google.com/maps?q=Vetrina%20Healtcare%20Pvt.Ltd%2C%20Katraj%20Dairy%20Road%2C%20Chandrabhaga%20Chowk%2C%2C%20Shriram%20Nagar%2C%20Dhankawadi%2C%20Pune%2C%20Maharashtra%20411046%2C%20India&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                    <a href="https://www.pureblack.de">web designer</a>
+                  </div>
+                  <style>.mapouter{text-align:right;height:397px;width:1218px;}.gmap_canvas {overflow:hidden;background:none!important;height:397px;width:1218px;}</style> 
                 </div>
-                <style>.mapouter{text-align:right;height:397px;width:1218px;}.gmap_canvas {overflow:hidden;background:none!important;height:397px;width:1218px;}</style> 
+              </div>
+            </div>
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 footerAddress">
+              <h3>Address:</h3> 
+              1, Unique Tower, Chandrabhaga Nagar,<br> Katraj Dairy Road, Katraj, 411046<br />
+              E-Mail: info@vetrinahealthcare.com<br />
+              Website:www.vetrinahealthcare.com <br /><br />
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 navigation">
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="index.html#products">Products</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="career.html">Career</a></li>
+                <li><a href="contact-us.html">Contact</a></li>            
+              </ul>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+              <div class="iconSocial">
+                <ul>
+                  <li><a href="https://www.facebook.com/VetrinaAnimalHealth" target="_blank"><img src="images/icons/facebook.jpg"></a></li>
+                  <li><a href="https://twitter.com/mangesh1611?s=09" target="_blank"><img src="images/icons/twitter.jpg"></a></li>
+                  <!-- <li><a href="javascript:void(0);" target="_black"><img src="images/icons/linkedin.jpg"></a></li> -->
+                  <li><a href="https://www.instagram.com/vetrinahealthcare/?hl=en" target="_blank"><img src="images/icons/insta.jpg"></a></li>
+                  <!-- <li><a href="javascript:void(0);" target="_blank"><img src="images/icons/youtube.png"></a></li>  -->
+                </ul>
               </div>
             </div>
           </div>
-        </div>
-      </div><!-- /.container -->
-    </div>
-        
-       <div class="footer">
-        <div class="container">
-          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 footerAddress">
-            <h3>Address:</h3> 
-            1, Unique Tower, Chandrabhaga Nagar,<br> Katraj Dairy Road, Katraj, 411046<br />
-            E-Mail: info@vetrinahealthcare.com<br />
-            Website:www.vetrinahealthcare.com 
-          </div>
-          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 navigation">
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about-us.html">About Us</a></li>
-              <li><a href="javascript:void(0);">Products</a></li>
-              <li><a href="blogs.html">Blogs</a></li>
-              <li><a href="career.html">Career</a></li>
-              <li><a href="contact-us.html">Contact</a></li>
-              <li><a href="javascript:void(0);">Privacy Policy</a></li>
-              <li><a href="javascript:void(0);">Terms &amp; Conditions</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-            <div class="iconSocial">
-              <ul> 
-                <li><a href="https://www.facebook.com/VetrinaAnimalHealth">f</a></li>
-                <li><a href="https://twitter.com/mangesh1611?s=09">t</a></li>
-                <li><a href="javascript:void(0);">n</a></li>
-                <li><a href="https://www.instagram.com/vetrinahealthcare/?hl=en">l</a></li>
-                <li><a href="javascript:void(0);">y</a></li>
-                <!-- <li><a href="javascript:void(0);"></a></li> -->
-              </ul>
+          <div id="copyright" class="row copyright">
+            <div class="col-md-6">
+              <p class="text-right"> Copyright &copy; 2019 </p> 
             </div>
-          </div>
-          <div id="copyright" class="col-md-12 copyright">
-            <p class="text-center"> Copyright &copy; 2019 Vetrina Healthcare Pvt. Ltd.</p>
+            <div class="col-md-6">
+              <p class="text-left"><span class="company_name"> Vetrina Healthcare Pvt. Ltd.</span></p>
+            </div>
           </div>
         </div>
     </div>
@@ -187,7 +203,8 @@
               <div class="input-group input-group-lg">
                 <input type="text" class="form-control" placeholder="Search for...">
                 <span class="input-group-btn">
-                  <button class="btn btn-default" type="button">Search</button>
+                  <!-- <button class="btn btn-default" type="button">Search</button> -->
+                  <a href="products/search.html" class="btn btn-default" type="button">Search</a>
                 </span>
               </div><!-- /input-group -->
             </div>

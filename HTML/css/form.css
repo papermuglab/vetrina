@@ -15,7 +15,7 @@ h1, p
   text-align: center;
 }
 
-input, textarea , button
+.form_container input,.form_container textarea ,.form_container button
 {
   width: 100%;
 }    
@@ -41,4 +41,7 @@ textarea
     float: left;
     width: 100%;
     margin-bottom: 0;
+}
+.input-group .form-control:focus {
+    z-index: 0 !important;
 }
