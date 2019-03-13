@@ -1,4 +1,16 @@
 $(document).ready(function () {
+    $('select[name=menu_id]').on('change', function () {
+        var menu_id = $(this).val();
+        $('#sub_menu_id').empty();
+        $.post(base_url + '/common/search_sub_menu', {menu_id: menu_id}, function (data) {
+            $.each(data, function (index, value) {
+                $('#sub_menu_id').append($('<option>', {
+                    value: value['id'],
+                    text: value['name']
+                }));
+            });
+        }, 'json');
+    });
     CKEDITOR.replace('editor1');
 });
 function deleteRecord(type, record_id) {

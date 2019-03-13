@@ -17,6 +17,7 @@ class Import extends MY_Controller {
 
     public function products() {
         $menu_id = $this->input->post('menu_id');
+        $sub_menu_id = $this->input->post('sub_menu_id');
         if (is_uploaded_file($_FILES['csv_file']['tmp_name'])) {
 
             //open uploaded csv file with read only mode
@@ -28,6 +29,7 @@ class Import extends MY_Controller {
             while (($line = fgetcsv($csvFile)) !== FALSE) {
                 if (!empty($line[0])) {
                     $params['menu_id'] = $menu_id;
+                    $params['sub_menu_id'] = $sub_menu_id;
                     $params['title'] = $line[0];
                     $params['permalink'] = createPermaLink($line[0]);
                     $params['description'] = $line[2];

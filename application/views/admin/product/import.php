@@ -14,11 +14,16 @@
             <form enctype="multipart/form-data" action="<?php echo base_url('admin/import/products'); ?>" method="POST" autocomplete="off">
                 <div class="form-group">
                     <label for="email">Select menu:</label>
-                    <select class="form-control" name="menu_id">
+                    <select class="form-control" id="menu_id" name="menu_id">
                         <option value="">Select menu</option>
                         <?php foreach($menus AS $menu): ?>
                         <option value="<?php echo $menu['id']; ?>"><?php echo $menu['name']; ?></option>
                         <?php endforeach; ?>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="email">Select Sub menu:</label>
+                    <select class="form-control" id="sub_menu_id" name="sub_menu_id">
                     </select>
                 </div>
                 <div class="form-group">
