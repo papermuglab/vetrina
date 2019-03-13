@@ -35,4 +35,11 @@ class Common extends CI_Controller {
         echo getDesignedMessage('Record is deleted successfully.');
     }
 
+    public function search_sub_menu() {
+        $this->load->model('admin/menu_model', 'menu');
+        $menu_id = $this->input->post('menu_id');
+        $result = $this->menu->getSubMenus($menu_id);
+        print_r(json_encode($result));
+    }
+
 }

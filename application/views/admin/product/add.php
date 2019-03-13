@@ -23,6 +23,14 @@
                     </select>
                 </div>
                 <div class="form-group">
+                    <label for="email">Select Sub menu:</label>
+                    <select class="form-control" id="sub_menu_id" name="sub_menu_id" required="required">
+                        <?php foreach($subMenus AS $subMenu): ?>
+                        <option value="<?php echo $subMenu['id']; ?>" <?php if(isset($row)){ if($row['sub_menu_id'] == $subMenu['id']){ echo 'selected'; } } ?>><?php echo $subMenu['name']; ?></option>
+                        <?php endforeach; ?>
+                    </select>
+                </div>
+                <div class="form-group">
                     <label for="email">Title:</label>
                     <input type="text" class="form-control" placeholder="Enter title" name="title" id="title" value="<?php if(isset($row)){ echo $row['title']; } ?>">
                 </div>

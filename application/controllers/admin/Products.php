@@ -17,12 +17,14 @@ class Products extends MY_Controller {
 
     public function add() {
         $data['menus'] = $this->dml->get(TBL_MENUS, 'is_deleted', 0);
+        $data['subMenus'] = array();
         $this->backEnd('admin/product/add', $data, true);
     }
 
     public function edit($product_id) {
         $data['row'] = $this->dml->getRow(TBL_PRODUCTS, 'id', $product_id);
         $data['menus'] = $this->dml->get(TBL_MENUS, 'is_deleted', 0);
+        $data['subMenus'] = $this->dml->get(TBL_SUB_MENUS, 'menu_id', $data['row']['menu_id']);
         $data['images'] = $this->dml->get(TBL_PRODUCT_IMAGES, 'product_id', $product_id);
         $this->backEnd('admin/product/add', $data, true);
     }
@@ -30,6 +32,7 @@ class Products extends MY_Controller {
     public function save() {
         $product_id = $this->input->post('product_id');
         $params['menu_id'] = $this->input->post('menu_id');
+        $params['sub_menu_id'] = $this->input->post('sub_menu_id');
         $params['title'] = $this->input->post('title');
         $params['description'] = $this->input->post('editor1');
         $params['ingredients'] = $this->input->post('ingredients');
