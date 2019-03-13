@@ -7,7 +7,7 @@ class About extends MY_Controller {
     }
 
     public function index() {
-        $this->load->view('front/static/about');
+        $this->load->view('about-us');
     }
 
 }
