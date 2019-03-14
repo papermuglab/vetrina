@@ -95,31 +95,28 @@
           </div>
           <div class="col-md-6">
             <div class="form_container">
+                <span id="ajax_message"></span>
                 <h3 class="w3-center">Drop Us a Message</h3>
-                <form class="career_form" id="career_form">
+                <form class="career_form" id="contact_form">
                   <div class="input-group input-group-lg">
                     <span class="input-group-addon" id="sizing-addon1"><i class=" glyphicon glyphicon-user"></i></span>
-                    <input type="text" class="form-control" placeholder="Your Name" aria-describedby="sizing-addon1" required>
+                    <input type="text" class="form-control" placeholder="Your Name" name="name" aria-describedby="sizing-addon1" required>
                   </div>
                   <div class="input-group input-group-lg">
                     <span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-envelope"></i></span>
-                    <input type="email" class="form-control" placeholder="Email" aria-describedby="sizing-addon1" required>
+                    <input type="email" class="form-control" placeholder="Email" name="email" aria-describedby="sizing-addon1" required>
                   </div>
                   <div class="input-group input-group-lg">
                     <span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-earphone"></i></span>
-                    <input type="text" class="form-control" size="10" maxlength="10" pattern="\d{10}" title="Please enter exactly 10 digits only" placeholder="Mobile No." aria-describedby="sizing-addon1" required>
+                    <input type="text" class="form-control" size="10" maxlength="10" name="mobile" pattern="\d{10}" title="Please enter exactly 10 digits only" placeholder="Mobile No." aria-describedby="sizing-addon1" required>
                   </div>
                   <div class="input-group input-group-lg">
                     <span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-home"></i></span>
-                    <textarea  class="form-control" placeholder="Address" aria-describedby="sizing-addon1" required></textarea>
-                  </div>  
-                  <div class="input-group input-group-lg">
-                    <span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-home"></i></span>
-                    <textarea  class="form-control" placeholder="Enter your Message" aria-describedby="sizing-addon1" required></textarea>
+                    <textarea  class="form-control" placeholder="Enter your Message" name="message" aria-describedby="sizing-addon1" required></textarea>
                   </div>              
                   <div class="input-group submit">
                     <!-- <span class="input-group-addon" id="sizing-addon1"></span> -->
-                    <input type="submit" class="btn btn-primary" Value="Submit" >
+                    <input type="button" id="contact_me" class="btn btn-primary" Value="Submit" >
                   </div>
                 </form>
             </div>
@@ -232,6 +229,22 @@
             } else {
               header.classList.remove("sticky");
             }
+            $("#contact_me").on('click', function(){
+                $.ajax({
+                    url: '<?php echo base_url('contact/addInquiry'); ?>',
+                    method: 'POST',
+                    async: false,
+                    data: $("#contact_form").serialize(),
+                    beforeSend: function () {
+                        $("#contact_me").prop('disabled', true); // disable button
+                    },
+                    success: function (response) {
+                        $("#ajax_message").html(response);
+                        $("#contact_form").trigger("reset");
+                        $("#contact_me").prop('disabled', false);
+                    }
+                });
+            });
           }
         </script>
       </body>
