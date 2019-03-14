@@ -17,7 +17,7 @@
     <div class="container">
       <div class="header clearfix">
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-          <a href="Javascript:void(0);" class="logo"><img src="../<?php echo base_url('assets/images/'); ?>vetrina-logo.jpg" alt="Vetrina Logo"></a>
+          <a href="Javascript:void(0);" class="logo"><img src="<?php echo base_url('assets/images/'); ?>vetrina-logo.jpg" alt="Vetrina Logo"></a>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12"></div>
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 iconSocial">
@@ -47,22 +47,22 @@
             </div>
             <div id="navbar" class="collapse navbar-collapse text-center">
               <ul class="nav navbar-nav">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about-us.html">About Us</a></li>
+                <li><a href=<?php echo base_url('home'); ?>>Home</a></li>
+                <li><a href=<?php echo base_url('about'); ?>>About Us</a></li>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Products <span class="caret"></span></a>
                   <ul class="dropdown-menu">
-                      <li><a href="cattle.html">Cattle</a></li>
-                      <li><a href="poultry.html">Poultry</a></li>
-                      <li><a href="companian_animal.html">Companion Animal</a></li>
-                      <li><a href="exotic_animal.html">Exotic Animals</a></li>
-                      <li><a href="swine.html">Swine</a></li>
-                      <li><a href="sheep.html">Goat/Sheep</a></li>
+                      <li><a href=<?php echo base_url('product/cattle'); ?>>Cattle</a></li>
+                      <li><a href=<?php echo base_url('product/poultry'); ?>>Poultry</a></li>
+                      <li><a href=<?php echo base_url('product/companian_animal'); ?>>Companion Animal</a></li>
+                      <li><a href=<?php echo base_url('product/exotic_animal'); ?>>Exotic Animals</a></li>
+                      <li><a href=<?php echo base_url('product/swine'); ?>>Swine</a></li>
+                      <li><a href=<?php echo base_url('product/sheep'); ?>>Goat/Sheep</a></li>
                   </ul>
                 </li>
-                <li><a href="blogs.html">Blogs</a></li>
-                <li><a href="career.html">Career</a></li>
-                <li><a href="contact-us.html">Contact Us</a></li>
+                <li><a href=<?php echo base_url('blogs'); ?>>Blogs</a></li>
+                <li><a href=<?php echo base_url('career'); ?>>Career</a></li>
+                <li><a href=<?php echo base_url('contact'); ?>>Contact Us</a></li>
               </ul>
             </div><!--/.nav-collapse -->
           </div>
@@ -73,7 +73,7 @@
     <div class="container-fluid w3-margin-top">        
       <nav aria-label="breadcrumb ">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href=<?php echo base_url('home'); ?>>Home</a></li>
           <li class="breadcrumb-item"><a href="#" onclick="goBack()">Product</a></li>
           <li class="breadcrumb-item active" aria-current="page">Prodict List</li>
         </ol>
@@ -86,7 +86,7 @@
         <section class="featured-posts w3-margin-top">
           <div class="container">           
            <div class="row d-flex align-items-stretch w3-margin-top">
-              <div class="image col-lg-5"><img src="../<?php echo base_url('assets/images/'); ?>blogs/featured-pic-1.jpeg" alt="..."></div>
+              <div class="image col-lg-5"><img src="<?php echo base_url('assets/images/'); ?>blogs/featured-pic-1.jpeg" alt="..."></div>
               <div class="text col-lg-7">
                 <div class="text-inner d-flex align-items-center">
                   <div class="content">
@@ -110,7 +110,7 @@
               </div>
             </div>
             <div class="row d-flex align-items-stretch w3-margin-top">
-              <div class="image col-lg-5"><img src="../<?php echo base_url('assets/images/'); ?>blogs/featured-pic-3.jpeg" alt="..."></div>
+              <div class="image col-lg-5"><img src="<?php echo base_url('assets/images/'); ?>blogs/featured-pic-3.jpeg" alt="..."></div>
               <div class="text col-lg-7">
                 <div class="text-inner d-flex align-items-center">
                   <div class="content">
@@ -134,7 +134,7 @@
               </div>
             </div>
             <div class="row d-flex align-items-stretch w3-margin-top">
-              <div class="image col-lg-5"><img src="../<?php echo base_url('assets/images/'); ?>blogs/featured-pic-2.jpeg" alt="..."></div>
+              <div class="image col-lg-5"><img src="<?php echo base_url('assets/images/'); ?>blogs/featured-pic-2.jpeg" alt="..."></div>
               <div class="text col-lg-7">
                 <div class="text-inner d-flex align-items-center">
                   <div class="content">
@@ -172,12 +172,12 @@
           </div>
           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 navigation">
             <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about-us.html">About Us</a></li>
+              <li><a href=<?php echo base_url('home'); ?>>Home</a></li>
+              <li><a href=<?php echo base_url('about'); ?>>About Us</a></li>
               <li><a href="javascript:void(0);">Products</a></li>
-              <li><a href="blogs.html">Blogs</a></li>
-              <li><a href="career.html">Career</a></li>
-              <li><a href="contact-us.html">Contact</a></li>              
+              <li><a href=<?php echo base_url('blogs'); ?>>Blogs</a></li>
+              <li><a href=<?php echo base_url('career'); ?>>Career</a></li>
+              <li><a href=<?php echo base_url('contact'); ?>>Contact</a></li>              
             </ul>
           </div>
           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">

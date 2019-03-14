@@ -15,12 +15,14 @@ class Products extends MY_Controller {
         $this->load->config('pagination');
         $config = $this->config->item('front_pagination');
         $config["uri_segment"] = 3;
-        $config["base_url"] = base_url('products/' . $permalink);
+        $config["base_url"] = base_url($this->uri->segment(1) . '/' . $permalink);
         $config["total_rows"] = $this->model->countTotal($menu_id);
         $this->pagination->initialize($config);
         $data['products'] = $this->model->get($offset, $menu_id);
         $data['product_count'] = $config["total_rows"];
-        $this->load->view('front/product/list', $data);
+//        echo '<pre>';
+//        print_r($data);die();
+        $this->load->view('product/product_list', $data);
     }
 
     public function detail() {

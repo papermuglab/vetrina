@@ -20,7 +20,7 @@
    <div class="container">
       <div class="header clearfix">
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-          <a href="index.html" class="logo"><img src="<?php echo base_url('assets/images/'); ?>vetrina-logo.jpg" alt="Vetrina Logo"></a>
+          <a href=<?php echo base_url('home'); ?> class="logo"><img src="<?php echo base_url('assets/images/'); ?>vetrina-logo.jpg" alt="Vetrina Logo"></a>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12"></div>
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 iconSocial">
@@ -50,22 +50,22 @@
             </div>
             <div id="navbar" class="collapse navbar-collapse text-center">
               <ul class="nav navbar-nav">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about-us.html">About Us</a></li>
+                <li><a href=<?php echo base_url('home'); ?>>Home</a></li>
+                <li><a href=<?php echo base_url('about'); ?>>About Us</a></li>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Products <span class="caret"></span></a>
                   <ul class="dropdown-menu">
-                      <li><a href="product/cattle.html">Cattle</a></li>
-                      <li><a href="product/poultry.html">Poultry</a></li>
-                      <li><a href="product/companian_animal.html">Companion Animal</a></li>
-                      <li><a href="product/exotic_animal.html">Exotic Animals</a></li>
-                      <li><a href="product/swine.html">Swine</a></li>
-                      <li><a href="product/sheep.html">Goat/Sheep</a></li>
+                      <li><a href=<?php echo base_url('product/cattle'); ?>>Cattle</a></li>
+                      <li><a href=<?php echo base_url('product/poultry'); ?>>Poultry</a></li>
+                      <li><a href=<?php echo base_url('product/companian_animal'); ?>>Companion Animal</a></li>
+                      <li><a href=<?php echo base_url('product/exotic_animal'); ?>>Exotic Animals</a></li>
+                      <li><a href=<?php echo base_url('product/swine'); ?>>Swine</a></li>
+                      <li><a href=<?php echo base_url('product/sheep'); ?>>Goat/Sheep</a></li>
                     </ul>
                 </li>
-                <li><a href="blogs.html">Blogs</a></li>
-                <li><a href="career.html" class="active">Career</a></li>
-                <li><a href="contact-us.html">Contact Us</a></li>
+                <li><a href=<?php echo base_url('blogs'); ?>>Blogs</a></li>
+                <li><a href=<?php echo base_url('career'); ?> class="active">Career</a></li>
+                <li><a href=<?php echo base_url('contact'); ?>>Contact Us</a></li>
               </ul>
             </div><!--/.nav-collapse -->
           </div>
@@ -130,12 +130,12 @@
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 navigation">
               <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about-us.html">About Us</a></li>
+                <li><a href=<?php echo base_url('home'); ?>>Home</a></li>
+                <li><a href=<?php echo base_url('about'); ?>>About Us</a></li>
                 <li><a href="index.html#products">Products</a></li>
-                <li><a href="blogs.html">Blogs</a></li>
-                <li><a href="career.html">Career</a></li>
-                <li><a href="contact-us.html">Contact</a></li>            
+                <li><a href=<?php echo base_url('blogs'); ?>>Blogs</a></li>
+                <li><a href=<?php echo base_url('career'); ?>>Career</a></li>
+                <li><a href=<?php echo base_url('contact'); ?>>Contact</a></li>            
               </ul>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">

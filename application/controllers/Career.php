@@ -7,7 +7,7 @@ class Career extends MY_Controller {
     }
 
     public function index() {
-        $this->load->view('front/static/career');
+        $this->load->view('career');
     }
 
 }
