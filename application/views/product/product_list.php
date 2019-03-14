@@ -113,7 +113,7 @@
                             <?php if($index == 0 || $index == 3 || $index == 6): ?>
                             </div>
                             <?php endif; ?>
-                            <?php endforeach; ?>
+                            <?php $index++; endforeach; ?>
                         </div>
                     </div>
                     <nav aria-label="navigation">
