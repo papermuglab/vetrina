@@ -110,7 +110,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            <?php if($index == 0 || $index == 3 || $index == 6): ?>
+                            <?php if($index == 2 || $index == 5 || $index == 8): ?>
                             </div>
                             <?php endif; ?>
                             <?php $index++; endforeach; ?>
