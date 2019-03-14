@@ -4,7 +4,7 @@ class Product_model extends CI_Model {
 
     public function getMenuID($permalink) {
         $this->db->select('id');
-        $this->db->from(TBL_MENUS);
+        $this->db->from(TBL_SUB_MENUS);
         $this->db->where('permalink', $permalink);
         $this->db->limit(1);
         $row = $this->db->get()->row_array();
@@ -18,7 +18,7 @@ class Product_model extends CI_Model {
         $this->db->select('COUNT(id) AS total');
         $this->db->from(TBL_PRODUCTS);
         $this->db->where('is_deleted', 0);
-        $this->db->where('menu_id', $menu_id);
+        $this->db->where('sub_menu_id', $menu_id);
         return $this->db->get()->row()->total;
     }
 
@@ -26,12 +26,12 @@ class Product_model extends CI_Model {
      * Fetch products for Listing page
      */
     public function get($offset, $menu_id) {
-        $this->db->select('id AS id, title, permalink');
+        $this->db->select('id AS id, title, description, ingredients');
         $this->db->from(TBL_PRODUCTS);
         $this->db->where('is_deleted', 0);
-        $this->db->where('menu_id', $menu_id );
+        $this->db->where('sub_menu_id', $menu_id );
         $this->db->order_by('added_on', 'DESC');
-        $this->db->limit(10, $offset);
+        $this->db->limit(9, $offset);
         $result = $this->db->get()->result_array();
         foreach ($result AS $key => $value) {
             $result[$key]['image_name'] = $this->getProductImageName($value['id']);

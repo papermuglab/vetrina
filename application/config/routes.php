@@ -50,15 +50,29 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   | Examples:	my-controller/index	-> my_controller/index
   |		my-controller/my-method	-> my_controller/my_method
  */
-$route['default_controller'] = 'welcome';
+$route['default_controller'] = 'home';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['admin'] = 'admin/login/index';
 
-$route['products/(:any)/(:num)'] = 'products/index/$1/$1';
-$route['products/(:any)'] = 'products/index/$1';
-$route['product/(:any)'] = 'products/detail/$1';
+$route['cattle/(:any)'] = 'products/index/$1';
+$route['poultry/(:any)'] = 'products/index/$1';
+$route['companian_animal/(:any)'] = 'products/index/$1';
+$route['exotic_animal/(:any)'] = 'products/index/$1';
+$route['swine/(:any)'] = 'products/index/$1';
+$route['sheep/(:any)'] = 'products/index/$1';
+
+$route['cattle/(:any)/(:num)'] = 'products/index/$1/$1';
+$route['poultry/(:any)/(:num)'] = 'products/index/$1/$1';
+$route['companian_animal/(:any)/(:num)'] = 'products/index/$1/$1';
+$route['exotic_animal/(:any)/(:num)'] = 'products/index/$1/$1';
+$route['swine/(:any)/(:num)'] = 'products/index/$1/$1';
+$route['sheep/(:any)/(:num)'] = 'products/index/$1/$1';
+
+//$route['products/(:any)/(:num)'] = 'products/index/$1/$1';
+//$route['products/(:any)'] = 'products/index/$1';
+//$route['product/(:any)'] = 'products/detail/$1';
 
 $route['blog/(:any)'] = 'blogs/detail/$1';
 $route['blogs/(:any)/(:num)'] = 'blogs/index/$1/$1';

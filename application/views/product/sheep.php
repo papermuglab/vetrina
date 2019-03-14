@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-     <link rel="shortcut icon" type="image/icon" href="../<?php echo base_url('assets/images/'); ?>favicon.png"/>
+     <link rel="shortcut icon" type="image/icon" href="<?php echo base_url('assets/images/'); ?>favicon.png"/>
     <title>Vetrina | Home</title>
     <!-- Bootstrap -->
     <link href="<?php echo base_url('assets/css/'); ?>bootstrap.min.css" rel="stylesheet">
@@ -19,16 +19,16 @@
      <div class="container">
         <div class="header clearfix">
           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-            <a href="../index.html" class="logo"><img src="../<?php echo base_url('assets/images/'); ?>vetrina-logo.jpg" alt="Vetrina Logo"></a>
+            <a href=<?php echo base_url('home'); ?> class="logo"><img src="<?php echo base_url('assets/images/'); ?>vetrina-logo.jpg" alt="Vetrina Logo"></a>
           </div>
           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12"></div>
           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 iconSocial">
             <ul>
-                <li><a href="https://www.facebook.com/VetrinaAnimalHealth" target="_blank"><img src="../<?php echo base_url('assets/images/'); ?>icons/facebook.jpg"></a></li>
-                <li><a href="https://twitter.com/mangesh1611?s=09" target="_blank"><img src="../<?php echo base_url('assets/images/'); ?>icons/twitter.jpg"></a></li>
-                <!-- <li><a href="javascript:void(0);" target="_black"><img src="../<?php echo base_url('assets/images/'); ?>icons/linkedin.jpg"></a></li> -->
-                <li><a href="https://www.instagram.com/vetrinahealthcare/?hl=en" target="_blank"><img src="../<?php echo base_url('assets/images/'); ?>icons/insta.jpg"></a></li>
-                <!-- <li><a href="javascript:void(0);" target="_blank"><img src="../<?php echo base_url('assets/images/'); ?>icons/youtube.png"></a></li> -->
+                <li><a href="https://www.facebook.com/VetrinaAnimalHealth" target="_blank"><img src="<?php echo base_url('assets/images/'); ?>icons/facebook.jpg"></a></li>
+                <li><a href="https://twitter.com/mangesh1611?s=09" target="_blank"><img src="<?php echo base_url('assets/images/'); ?>icons/twitter.jpg"></a></li>
+                <!-- <li><a href="javascript:void(0);" target="_black"><img src="<?php echo base_url('assets/images/'); ?>icons/linkedin.jpg"></a></li> -->
+                <li><a href="https://www.instagram.com/vetrinahealthcare/?hl=en" target="_blank"><img src="<?php echo base_url('assets/images/'); ?>icons/insta.jpg"></a></li>
+                <!-- <li><a href="javascript:void(0);" target="_blank"><img src="<?php echo base_url('assets/images/'); ?>icons/youtube.png"></a></li> -->
                 <li><a href="javascript:void(0);" data-toggle="modal" data-target="#myModal" target="_blank"></a></li>
             </ul>
           </div>
@@ -49,22 +49,22 @@
               </div>
               <div id="navbar" class="collapse navbar-collapse text-center">
                 <ul class="nav navbar-nav">
-                  <li><a href="../index.html">Home</a></li>
-                  <li><a href="../about-us.html">About Us</a></li>
+                  <li><a href=<?php echo base_url('home'); ?>>Home</a></li>
+                  <li><a href=<?php echo base_url('about'); ?>>About Us</a></li>
                   <li class="dropdown">
                     <a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Products <span class="caret"></span></a>
                      <ul class="dropdown-menu">
-                      <li><a href="cattle.html">Cattle</a></li>
-                      <li><a href="poultry.html">Poultry</a></li>
-                      <li><a href="companian_animal.html">Companion Animal</a></li>
-                      <li><a href="exotic_animal.html">Exotic Animals</a></li>
-                      <li><a href="swine.html">Swine</a></li>
-                      <li><a href="sheep.html" class="active">Goat/Sheep</a></li>
+                      <li><a href=<?php echo base_url('product/cattle'); ?>>Cattle</a></li>
+                      <li><a href=<?php echo base_url('product/poultry'); ?>>Poultry</a></li>
+                      <li><a href=<?php echo base_url('product/companian_animal'); ?>>Companion Animal</a></li>
+                      <li><a href=<?php echo base_url('product/exotic_animal'); ?>>Exotic Animals</a></li>
+                      <li><a href=<?php echo base_url('product/swine'); ?>>Swine</a></li>
+                      <li><a href=<?php echo base_url('product/sheep'); ?> class="active">Goat/Sheep</a></li>
                     </ul>
                   </li>
-                  <li><a href="../blogs.html">Blogs</a></li>
-                  <li><a href="../career.html">Career</a></li>
-                  <li><a href="../contact-us.html">Contact Us</a></li>
+                  <li><a href=<?php echo base_url('blogs'); ?>>Blogs</a></li>
+                  <li><a href=<?php echo base_url('career'); ?>>Career</a></li>
+                  <li><a href=<?php echo base_url('contact'); ?>>Contact Us</a></li>
                 </ul>
               </div><!--/.nav-collapse -->
             </div>
@@ -77,7 +77,7 @@
         <div class="container">      
           <div class="col-md-6">
             <div class="companianBanner">
-              <img src="../<?php echo base_url('assets/images/'); ?>products/sheep_goat.jpg">
+              <img src="<?php echo base_url('assets/images/'); ?>products/sheep_goat.jpg">
             </div>           
           </div>
           <div class="col-md-6">
@@ -100,7 +100,7 @@
              </div>
              <div class="item-detail ">
               <p>In kids and lambs, controlling mortality, improving immunity and proper weight gain in first months is successful parameter to get early market weight. Proper feeding at every stage helps good return on investment in sheep and goat farming.</p>
-              <a href="product_list.html" class="w3-display-bottomright btn btn-primary">Products</a>
+              <a href="<?php echo base_url('sheep/stage-nutrition-4'); ?>" class="w3-display-bottomright btn btn-primary">Products</a>
              </div>
            </div>
           </div>
@@ -111,7 +111,7 @@
              </div>
              <div class="item-detail ">
               <p>You can trace every sickness, every diseases and every ailment to the nutrient deficiency. For faster recovery, specific nutritional strategy plays vital role to bring animal back to productivity and health.</p>
-              <a href="product_list.html" class="w3-display-bottomright btn btn-primary">Products</a>
+              <a href="<?php echo base_url('sheep/clinical-nutrition-4'); ?>" class="w3-display-bottomright btn btn-primary">Products</a>
              </div>
            </div>
           </div>
@@ -122,7 +122,7 @@
              </div>
              <div class="item-detail">
               <p>Environmental pathogens are major threat for sheep and goat rearing. Disease like FMD, PPR, Brucellosis, Pneumonia and many more; affect health and weight gain in sheep and goats. Control of these organisms on farm with proper biosecurity measure can improve farm profitability. </p>
-              <a href="product_list.html" class="w3-display-bottomright btn btn-primary">Products</a>
+              <a href="<?php echo base_url('sheep/bio-security-4'); ?>" class="w3-display-bottomright btn btn-primary">Products</a>
             </div>
            </div>
           </div>
@@ -141,22 +141,22 @@
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 navigation">
               <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../about-us.html">About Us</a></li>
+                <li><a href=<?php echo base_url('home'); ?>>Home</a></li>
+                <li><a href=<?php echo base_url('about'); ?>>About Us</a></li>
                 <li><a href="../index.html#products">Products</a></li>
-                <li><a href="../blogs.html">Blogs</a></li>
-                <li><a href="../career.html">Career</a></li>
-                <li><a href="../contact-us.html">Contact</a></li>              
+                <li><a href=<?php echo base_url('blogs'); ?>>Blogs</a></li>
+                <li><a href=<?php echo base_url('career'); ?>>Career</a></li>
+                <li><a href=<?php echo base_url('contact'); ?>>Contact</a></li>              
               </ul>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
               <div class="iconSocial">
                 <ul>
-                  <li><a href="https://www.facebook.com/VetrinaAnimalHealth" target="_blank"><img src="../<?php echo base_url('assets/images/'); ?>icons/facebook.jpg"></a></li>
-                  <li><a href="https://twitter.com/mangesh1611?s=09" target="_blank"><img src="../<?php echo base_url('assets/images/'); ?>icons/twitter.jpg"></a></li>
-                  <!-- <li><a href="javascript:void(0);" target="_black"><img src="../<?php echo base_url('assets/images/'); ?>icons/linkedin.jpg"></a></li> -->
-                  <li><a href="https://www.instagram.com/vetrinahealthcare/?hl=en" target="_blank"><img src="../<?php echo base_url('assets/images/'); ?>icons/insta.jpg"></a></li>
-                  <!-- <li><a href="javascript:void(0);" target="_blank"><img src="../<?php echo base_url('assets/images/'); ?>icons/youtube.png"></a></li> -->
+                  <li><a href="https://www.facebook.com/VetrinaAnimalHealth" target="_blank"><img src="<?php echo base_url('assets/images/'); ?>icons/facebook.jpg"></a></li>
+                  <li><a href="https://twitter.com/mangesh1611?s=09" target="_blank"><img src="<?php echo base_url('assets/images/'); ?>icons/twitter.jpg"></a></li>
+                  <!-- <li><a href="javascript:void(0);" target="_black"><img src="<?php echo base_url('assets/images/'); ?>icons/linkedin.jpg"></a></li> -->
+                  <li><a href="https://www.instagram.com/vetrinahealthcare/?hl=en" target="_blank"><img src="<?php echo base_url('assets/images/'); ?>icons/insta.jpg"></a></li>
+                  <!-- <li><a href="javascript:void(0);" target="_blank"><img src="<?php echo base_url('assets/images/'); ?>icons/youtube.png"></a></li> -->
               </ul>
               </div>
             </div>

@@ -18,7 +18,7 @@ class Blogs extends MY_Controller {
         $this->pagination->initialize($config);
         $data['blogs'] = $this->model->get($offset);
         $data['blog_count'] = $config["total_rows"];
-        $this->load->view('front/blog/list', $data);
+        $this->load->view('blogs', $data);
     }
 
     public function detail() {
