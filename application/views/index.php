@@ -124,7 +124,7 @@
                 <div class="item">
                   <div class="bannerSlide dogBanner"></div>
                   <div class="carousel-caption">
-                    <span>Companian Animals</span>
+                    <span>Companion Animals</span>
                   </div>
                 </div>
                 <div class="item">
@@ -187,7 +187,7 @@
             </li>
             <li>
               <a href=<?php echo base_url('product/companian_animal'); ?>><i class="productIcons dogIcon"></i></a>
-              <div>Companian Animals</div>
+              <div>Companion Animals</div>
             </li>
             <li>
               <a href=<?php echo base_url('product/exotic_animal'); ?>><i class="productIcons exoticIcon"></i></a>
@@ -216,7 +216,7 @@
                   <p>
                     I used Bestcalf in growing calves of age 4-8 months and got excellent growth. 
                     <br><br>
-                    Calves reached sexual maturity earlier than usual and evelopment of the uterus was also complete owing to proper weight gain.
+                    Calves reached sexual maturity earlier than usual and development of the uterus was also complete owing to proper weight gain.
                     <br><br>
                     <span>-Yuvraj Padalkar, Sangrul, Kolhapur</span>
                   </p>
@@ -245,7 +245,7 @@
           <div class="row">
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 footerAddress">
               <h3>Address:</h3> 
-              1, Unique Tower, Chandrabhaga Nagar,<br> Katraj Dairy Road, Katraj, 411046<br />
+              1, Unique Tower, Chandrabhaga Nagar,<br> Katraj Dairy Road, Katraj, Pune-411046, <br />Maharashtra, India<br />
               E-Mail: info@vetrinahealthcare.com<br />
               Website:www.vetrinahealthcare.com <br /><br />
             </div>
@@ -291,10 +291,10 @@
             </div>
             <div class="modal-body">
               <div class="input-group input-group-lg">
-                <input type="text" class="form-control" placeholder="Search for...">
+                <input type="text" class="form-control" name="search_val" placeholder="Search for...">
                 <span class="input-group-btn">
                   <!-- <button class="btn btn-default" type="button">Search</button> -->
-                  <a href="product/search.html" class="btn btn-default" type="button">Search</a>
+                  <a href="#" class="btn btn-default input" type="button">Search</a>
                 </span>
               </div><!-- /input-group -->
             </div>

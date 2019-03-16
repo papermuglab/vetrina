@@ -35,6 +35,8 @@ class Products extends MY_Controller {
         $params['sub_menu_id'] = $this->input->post('sub_menu_id');
         $params['title'] = $this->input->post('title');
         $params['description'] = $this->input->post('editor1');
+        $params['feeding_instruction'] = $this->input->post('editor2');
+        $params['packaging'] = $this->input->post('editor3');
         $params['ingredients'] = $this->input->post('ingredients');
         $params['permalink'] = createPermaLink($params['title']);
         if (empty($product_id)) { // Add Product

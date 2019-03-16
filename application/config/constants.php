@@ -99,4 +99,4 @@ defined('TBL_INQUIRIES') OR define('TBL_INQUIRIES', 'inquiries');
 defined('TBL_SUB_MENUS') OR define('TBL_SUB_MENUS', 'sub_menus');
 
 // Admin details
-defined('ADMIN_EMAIL') OR define('ADMIN_EMAIL', 'hamzakt69@gmail.com');
+defined('ADMIN_EMAIL') OR define('ADMIN_EMAIL', 'info@vetrinahealthcare.com');

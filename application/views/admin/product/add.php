@@ -39,9 +39,18 @@
                     <input type="text" class="form-control" placeholder="Enter ingredients" name="ingredients" id="ingredients" value="<?php if(isset($row)){ echo $row['ingredients']; } ?>">
                 </div>
                 <div class="form-group">
-                    <label for="pwd">Description:</label>
+                    <label for="pwd">Benefit:</label>
                     <textarea id="editor1" name="editor1"><?php if(isset($row)){ echo $row['description']; } ?></textarea>
                 </div>
+                <div class="form-group">
+                    <label for="pwd">Fedding Instruction:</label>
+                    <textarea id="editor2" name="editor2"><?php if(isset($row)){ echo $row['feeding_instruction']; } ?> </textarea>
+                </div>
+                <div class="form-group">
+                    <label for="pwd">Packaging Information:</label>
+                    <textarea id="editor3" name="editor3"><?php if(isset($row)){ echo $row['packaging']; } ?></textarea>
+                </div>
+                
                 <div class="form-group">
                     <label for="pwd">Select images:</label>
                     <input type="file" class="form-control" placeholder="Enter images" name="images[]" multiple="true" accept="image/jpeg,image/jpg,image/png">

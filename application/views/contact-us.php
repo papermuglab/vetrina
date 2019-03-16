@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
      <link rel="shortcut icon" type="image/icon" href="<?php echo base_url('assets/images/'); ?>favicon.png"/>
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Vetrina | Home</title>
+    <title>Vetrina | Contact Us</title>
     <!-- Bootstrap -->
     <link href="<?php echo base_url('assets/css/'); ?>bootstrap.min.css" rel="stylesheet">
     <link href="<?php echo base_url('assets/css/'); ?>slick.css" rel="stylesheet">
@@ -87,7 +87,7 @@
               <div class="w3-display-middle">
                 <h3>Contact Info</h3>
                 <p><b>ADDRESS:</b> <br>
-                  1, Unique Tower, Chandrabhaga Nagar, Katraj Dairy Road, Katraj, 411046<br /></p>
+                  1, Unique Tower, Chandrabhaga Nagar, Katraj Dairy Road, Katraj, Pune-411046, <br />Maharashtra, India<br /></p>
                 <p><b>E-Mail:</b> <br> info@vetrinahealthcare.com<br /></p>
                 <p><b> Contact No.</b> <br>+91 8600844450</p>
               </div>
@@ -95,12 +95,12 @@
           </div>
           <div class="col-md-6">
             <div class="form_container">
-                <span id="ajax_message"></span>
+                <span id="ajax_message" style=""></span>
                 <h3 class="w3-center">Drop Us a Message</h3>
                 <form class="career_form" id="contact_form">
                   <div class="input-group input-group-lg">
                     <span class="input-group-addon" id="sizing-addon1"><i class=" glyphicon glyphicon-user"></i></span>
-                    <input type="text" class="form-control" placeholder="Your Name" name="name" aria-describedby="sizing-addon1" required>
+                    <input type="text" class="form-control" placeholder="Your Name" name="name" aria-describedby="sizing-addon1" required='true'>
                   </div>
                   <div class="input-group input-group-lg">
                     <span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-envelope"></i></span>
@@ -152,7 +152,7 @@
           <div class="row">
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 footerAddress">
               <h3>Address:</h3> 
-              1, Unique Tower, Chandrabhaga Nagar,<br> Katraj Dairy Road, Katraj, 411046<br />
+              1, Unique Tower, Chandrabhaga Nagar,<br> Katraj Dairy Road, Katraj, Pune-411046, <br />Maharashtra, India<br />
               E-Mail: info@vetrinahealthcare.com<br />
               Website:www.vetrinahealthcare.com <br /><br />
             </div>
@@ -160,7 +160,7 @@
               <ul>
                 <li><a href=<?php echo base_url('home'); ?>>Home</a></li>
                 <li><a href=<?php echo base_url('about'); ?>>About Us</a></li>
-                <li><a href="index.html#products">Products</a></li>
+                <li><a href="<?php echo base_url('home'); ?>#products">Products</a></li>
                 <li><a href=<?php echo base_url('blogs'); ?>>Blogs</a></li>
                 <li><a href=<?php echo base_url('career'); ?>>Career</a></li>
                 <li><a href=<?php echo base_url('contact'); ?>>Contact</a></li>            
@@ -198,10 +198,10 @@
             </div>
             <div class="modal-body">
               <div class="input-group input-group-lg">
-                <input type="text" class="form-control" placeholder="Search for...">
+                <input type="text" class="form-control" name="search_val" placeholder="Search for...">
                 <span class="input-group-btn">
                   <!-- <button class="btn btn-default" type="button">Search</button> -->
-                  <a href="product/search.html" class="btn btn-default" type="button">Search</a>
+                  <a href="#" class="btn btn-default input" type="button">Search</a>
                 </span>
               </div><!-- /input-group -->
             </div>
@@ -219,7 +219,6 @@
           window.onscroll = function() {myFunction()};
 
           var header = document.getElementById("myHeader");
-          console.log(header);
           var sticky = header.offsetTop;
 
           function myFunction() {
@@ -229,7 +228,9 @@
             } else {
               header.classList.remove("sticky");
             }
-            $("#contact_me").on('click', function(){
+        }
+
+    $("#contact_me").unbind().click(function(){
                 $.ajax({
                     url: '<?php echo base_url('contact/addInquiry'); ?>',
                     method: 'POST',
@@ -245,7 +246,6 @@
                     }
                 });
             });
-          }
         </script>
       </body>
     </html>

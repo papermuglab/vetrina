@@ -1,14 +1,18 @@
 <?php
 
-function sendEmail($email, $type, $data) {
+function sendEmail($email, $type, $data, $file = false) {
     $CI = & get_instance();
     $content = content($type, $data);
     $CI->load->library('email');
     $CI->email->set_mailtype("html");
     $CI->load->library('email');
-    $CI->email->from('example@gmail.com', PROJECT_NAME . ' Team');
+    // $CI->email->from('example@gmail.com', PROJECT_NAME . ' Team');
+    $CI->email->from('info@vetrinahealthcare.com', PROJECT_NAME . ' Team');
     $CI->email->to($email);
     $CI->email->subject($content['subject']);
+    if ($file) {
+        $CI->email->attach($file);
+    }
     $theme = '';
     $theme .= '<table border="0" cellpadding="40" cellspacing="0" width="100%">';
     $theme .= '<tbody>';
@@ -64,6 +68,18 @@ function content($type, $data) {
             $table .= '<tr><td>Message: </td><td>' . $data['message'] . '</td></tr>';
             $table .= '</table>';
             $params['message'] = '<p>We found new inquiry.</p>';
+            $params['message'] .= '<p>Below details of user.</p>';
+            $params['message'] .= $table;
+            break;
+        case 2: // Career inquiry to Admin
+            $params['subject'] = 'New Career inquiry';
+            $table = '<table>';
+            $table .= '<tr><td>Name: </td><td>' . $data['name'] . '</td></tr>';
+            $table .= '<tr><td>Email: </td><td>' . $data['email'] . '</td></tr>';
+            $table .= '<tr><td>Mobile: </td><td>' . $data['mobile'] . '</td></tr>';
+            $table .= '<tr><td>Profession: </td><td>' . $data['profession'] . '</td></tr>';
+            $table .= '</table>';
+            $params['message'] = '<p>We found new career inquiry.</p>';
             $params['message'] .= '<p>Below details of user.</p>';
             $params['message'] .= $table;
             break;

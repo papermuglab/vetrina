@@ -21,7 +21,7 @@ class Contact extends MY_Controller {
         $params['client_ip'] = $this->input->ip_address();
         $result = $this->dml->insert(TBL_INQUIRIES, $params);
         if ($result['status']) {  // Success
-            sendEmail(ADMIN_EMAIL, 1, $params);
+            // sendEmail(ADMIN_EMAIL, 1, $params);
             $message = getDesignedMessage("Thank you so much for your time, Our Team will contact you soon.");
         } else {
             $message = getDesignedMessage("Something wrong happened, Please try again.", 2);

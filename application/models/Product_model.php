@@ -26,7 +26,7 @@ class Product_model extends CI_Model {
      * Fetch products for Listing page
      */
     public function get($offset, $menu_id) {
-        $this->db->select('id AS id, title, description, ingredients');
+        $this->db->select('id AS id, title, description, ingredients, feeding_instruction, packaging');
         $this->db->from(TBL_PRODUCTS);
         $this->db->where('is_deleted', 0);
         $this->db->where('sub_menu_id', $menu_id );
@@ -51,8 +51,8 @@ class Product_model extends CI_Model {
     /*
      * Used in Search product page.
      */
-    public function getByName($offset, $search_key) {
-        $this->db->select('id AS id, title, permalink');
+    public function search($offset, $search_key) {
+        $this->db->select('id AS id, title, description, ingredients, feeding_instruction, packaging');
         $this->db->from(TBL_PRODUCTS);
         $this->db->like('title', $search_key, 'both');
         $this->db->where('is_deleted', 0);
@@ -68,7 +68,7 @@ class Product_model extends CI_Model {
     /*
      * Used in Search product page Count the product.
      */
-    public function getByNameCount($search_key) {
+    public function searchCountTotal($search_key) {
         $this->db->select('COUNT(id) AS total');
         $this->db->from(TBL_PRODUCTS);
         $this->db->like('title', $search_key, 'both');

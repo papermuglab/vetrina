@@ -6,15 +6,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" type="image/icon" href="<?php echo base_url('assets/images/'); ?>favicon.png"/>
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-        <title>Vetrina | Career</title>
+        <title>Vetrina | Blogs</title>
         <!-- Bootstrap -->
         <link href="<?php echo base_url('assets/css/'); ?>bootstrap.min.css" rel="stylesheet">
         <link href="<?php echo base_url('assets/css/'); ?>slick.css" rel="stylesheet">
         <link href="<?php echo base_url('assets/css/'); ?>style.css" rel="stylesheet">
         <link href="<?php echo base_url('assets/css/'); ?>style-responsive.css" rel="stylesheet">
         <link href="<?php echo base_url('assets/css/'); ?>w3.css" rel="stylesheet">
-        <link href="<?php echo base_url('assets/css/'); ?>animate.css" rel="stylesheet">
-        <link href="<?php echo base_url('assets/css/'); ?>form.css" rel="stylesheet">    
+
     </head>
     <body>
         <div class="container">
@@ -63,8 +62,8 @@
                                         <li><a href=<?php echo base_url('product/sheep'); ?>>Goat/Sheep</a></li>
                                     </ul>
                                 </li>
-                                <li><a href=<?php echo base_url('blogs'); ?>>Blogs</a></li>
-                                <li><a href=<?php echo base_url('career'); ?> class="active">Career</a></li>
+                                <li><a href=<?php echo base_url('blogs'); ?> class="active">Blogs</a></li>
+                                <li><a href=<?php echo base_url('career'); ?>>Career</a></li>
                                 <li><a href=<?php echo base_url('contact'); ?>>Contact Us</a></li>
                             </ul>
                         </div><!--/.nav-collapse -->
@@ -72,53 +71,75 @@
                 </nav>
             </div>
         </div>
-
         <div class="container-fluid">
+            <!-- <div class="row w3-center w3-margin-top"><div class="col-md-12"><h1>Blogs</h1></div></div> -->
             <div class="row">
-                <div class="container">
-                    <h1 class="w3-center">Work with Us</h1>
-                    <div class='col-md-6'>
-                        <div class="career_info">
-                            <h3>Working at <span class="company_name">Vetrina</span></h3>
-                            <p>We offer challenging and exciting career opportunities for smart and dedicated professionals. The success of the company is directly attributed to its strong and committed team. </p>
-                            <p>At <span class="company_name">Vetrina</span>, we believe in development of our team members and exposing them to different training programs regularly to enhance their skill set. We motivate our human resource to take new challenges and achieve higher growths. </p>
-                            <p>We maintain safe and healthy work environment for all our employees and strive to provide fair working conditions which inspire every individual to imbibe the spirit of entrepreneurship and ownership in the organization. </p>
+                <div class="col-lg-2"></div>
+                <section class="post blog-post col-lg-8"> 
+                    <!-- <div class="container"> -->
+                    <div class="post-single">
+                        <?php if($row['image_name']): ?>
+                        <div class="post-thumbnail"><img src="<?php echo base_url('uploads/blog/'.$row['image_name']); ?>" alt="..." class="img-fluid"></div>
+                        <?php endif; ?>
+                        <div class="post-details">
+                            <h1><?php echo $row['title']; ?></h1>
+                            <footer class="post-footer d-flex align-items-center">
+                                <div class="date"><i class="glyphicon glyphicon-time"></i><?php echo date('D, m-Y', strtotime($row['added_on'])); ?></div>
+                            </footer>
+                            <div class="post-body">
+                                <?php echo $row['description']; ?>
+                            </div>
+
+                            <?php if($row['is_comment_available'] == 1): ?>
+                            <div class="post-comments">
+                                <header>
+                                    <h3 class="h6">Post Comments</h3>
+                                </header>
+                                <?php foreach($comments AS $comment): ?>
+                                <div class="comment">
+                                    <div class="comment-header d-flex justify-content-between">
+                                        <div class="user d-flex align-items-center">
+                                            <div class="title"><strong><?php echo $comment['is_admin'] == 1 ? 'Administrator' : $comment['name']; ?></strong><span class="date"><?php echo date('d, m-Y', strtotime($comment['added_on'])); ?></span></div>
+                                        </div>
+                                    </div>
+                                    <div class="comment-body">
+                                        <p><?php echo $comment['comment'] ?></p>
+                                    </div>
+                                </div>
+                                <?php endforeach; ?>
+                            </div>
+                            <div class="add-comment">
+                                <?php echo $this->session->flashdata('message');  ?>
+                                <header>
+                                    <h3 class="h6">Leave a reply</h3>
+                                </header>
+                                <form action="<?php echo base_url('blogs/addComment'); ?>" class="commenting-form" method="POST">
+                                    <input type="hidden" name="blog_id" value="<?php echo $row['id']; ?>">
+                                    <input type="hidden" name="permalink" value="<?php echo $row['permalink']; ?>">
+                                    <div class="row">
+                                        <div class="form-group col-md-6">
+                                            <input type="text" name="name" id="username" placeholder="Name" class="form-control" required="">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <input type="email" name="email" id="useremail" placeholder="Email Address (will not be published)" class="form-control" required="">
+                                        </div>
+                                        <div class="form-group col-md-12">
+                                            <textarea name="comment" id="usercomment" placeholder="Type your comment" class="form-control" required=""></textarea>
+                                        </div>
+                                        <div class="form-group col-md-12">
+                                            <button type="submit" class="btn btn-secondary">Submit Comment</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <?php endif; ?>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <?php echo $this->session->flashdata('message'); ?>
-                        <div class="form_container">
-                            <form class="career_form" id="career_form" action="<?php echo base_url('career/sendEmail'); ?>" method="POST" enctype="multipart/form-data">
-                                <div class="input-group input-group-lg">
-                                    <span class="input-group-addon" id="sizing-addon1"><i class=" glyphicon glyphicon-user"></i></span>
-                                    <input type="text" class="form-control" name="name" placeholder="Your Name" aria-describedby="sizing-addon1" required>
-                                </div>
-                                <div class="input-group input-group-lg">
-                                    <span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-envelope"></i></span>
-                                    <input type="email" class="form-control" name="email" placeholder="Email" aria-describedby="sizing-addon1" required>
-                                </div>
-                                <div class="input-group input-group-lg">
-                                    <span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-earphone"></i></span>
-                                    <input type="text" class="form-control" size="10" name="mobile" maxlength="10" pattern="\d{10}" title="Please enter exactly 10 digits only" placeholder="Mobile No." aria-describedby="sizing-addon1" required>
-                                </div>
-                                <div class="input-group input-group-lg">
-                                    <span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-home"></i></span>
-                                    <textarea  class="form-control" placeholder="Profession" name="profession" aria-describedby="sizing-addon1" required></textarea>
-                                </div>
-                                <div class="input-group input-group-lg">
-                                    <span class="input-group-addon" id="sizing-addon1">Resume</span>
-                                    <input type="file" id="resume" name="resume" class="form-control" placeholder="Resume" aria-describedby="sizing-addon1" required>
-                                </div>
-                                <div class="input-group submit">
-                                  <!-- <span class="input-group-addon" id="sizing-addon1"></span> -->
-                                    <input type="submit" class="btn btn-primary" Value="Submit" >
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
+                </section>
+                <div class="col-lg-2"></div>
             </div>
         </div><!-- /.container -->
+
 
         <div class="footer">
             <div class="container">
@@ -187,8 +208,6 @@
         <script src="<?php echo base_url('assets/js/'); ?>bootstrap.min.js"></script>
         <script src="<?php echo base_url('assets/js/'); ?>slick.min.js"></script>
         <script src="<?php echo base_url('assets/js/'); ?>custom.js"></script>
-        <script src="<?php echo base_url('assets/js/'); ?>wow.js"></script>
-        <script src="<?php echo base_url('assets/js/'); ?>form.js"></script>
         <script type="text/javascript">
             window.onscroll = function () {
                 myFunction()
