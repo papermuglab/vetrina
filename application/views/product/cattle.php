@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
      <link rel="shortcut icon" type="image/icon" href="<?php echo base_url('assets/images/'); ?>favicon.png"/>
-    <title>Vetrina | Home</title>
+    <title>Vetrina | Product</title>
     <!-- Bootstrap -->
     <link href="<?php echo base_url('assets/css/'); ?>bootstrap.min.css" rel="stylesheet">
     <link href="<?php echo base_url('assets/css/'); ?>slick.css" rel="stylesheet">
@@ -90,7 +90,7 @@
     </div><!-- /.container -->
 
   
-     <section class="container-fluid"> 
+     <section class="container"> 
       <div class="row"> 
           <!-- <div class="col-md-2"></div> -->
           <div class="col-md-4">
@@ -134,7 +134,7 @@
           <div class="row">
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 footerAddress">
               <h3>Address:</h3> 
-              1, Unique Tower, Chandrabhaga Nagar,<br> Katraj Dairy Road, Katraj, 411046<br />
+              1, Unique Tower, Chandrabhaga Nagar,<br> Katraj Dairy Road, Katraj, Pune-411046, <br />Maharashtra, India<br />
               E-Mail: info@vetrinahealthcare.com<br />
               Website:www.vetrinahealthcare.com<br /><br />
             </div>
@@ -142,7 +142,7 @@
               <ul>
                 <li><a href=<?php echo base_url('home'); ?>>Home</a></li>
                 <li><a href=<?php echo base_url('about'); ?>>About Us</a></li>
-                <li><a href="../index.html#products">Products</a></li>
+                <li><a href="<?php echo base_url('home'); ?>#products">Products</a></li>
                 <li><a href=<?php echo base_url('blogs'); ?>>Blogs</a></li>
                 <li><a href=<?php echo base_url('career'); ?>>Career</a></li>
                 <li><a href=<?php echo base_url('contact'); ?>>Contact</a></li>              
@@ -180,10 +180,10 @@
             </div>
             <div class="modal-body">
               <div class="input-group input-group-lg">
-                <input type="text" class="form-control" placeholder="Search for...">
+                <input type="text" class="form-control" name="search_val" placeholder="Search for...">
                 <span class="input-group-btn">
                   <!-- <button class="btn btn-default" type="button">Search</button> -->
-                  <a href="search.html" class="btn btn-default" type="button">Search</a>
+                  <a href="#" class="btn btn-default input" type="button">Search</a>
                 </span>
               </div><!-- /input-group -->
             </div>

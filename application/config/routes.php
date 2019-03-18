@@ -70,10 +70,11 @@ $route['exotic_animal/(:any)/(:num)'] = 'products/index/$1/$1';
 $route['swine/(:any)/(:num)'] = 'products/index/$1/$1';
 $route['sheep/(:any)/(:num)'] = 'products/index/$1/$1';
 
-//$route['products/(:any)/(:num)'] = 'products/index/$1/$1';
-//$route['products/(:any)'] = 'products/index/$1';
+$route['search/(:any)/(:num)'] = 'search/index/$1/$1';
+$route['search/(:any)'] = 'search/index/$1';
 //$route['product/(:any)'] = 'products/detail/$1';
 
-$route['blog/(:any)'] = 'blogs/detail/$1';
-$route['blogs/(:any)/(:num)'] = 'blogs/index/$1/$1';
+//$route['blog/(:any)'] = 'blogs/detail/$1';
+//$route['blogs/(:any)/(:num)'] = 'blogs/index/$1/$1';
 $route['blogs'] = 'blogs/index';
+$route['blogs/(:num)'] = 'blogs/index/$1';

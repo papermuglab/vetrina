@@ -110,10 +110,10 @@
             </div>
             <div class="col-md-9">
               <h4>Dr. Mangesh Ghadigaonkar <br><small>Founder & Managing Director</small>
-              <a href="https://www.linkedin.com/in/dr-mangesh-ghadigaonkar-7422a645" class="profileIcon">n</a></h4>  
+              <a href="https://www.linkedin.com/in/dr-mangesh-ghadigaonkar-7422a645" target="_blank" class="profileIcon">n</a></h4>  
               <p>
                 Dr. Mangesh Ghadigaonkar is a highly skilled business development professional holding a Bachelor’s degree in veterinary science from Bombay Veterinary College.
-                His technical expertise in dairy nutrition and product development skills in ruminants has helped him to position <span class="company_name">Vetrina Healthcare</span> Pvt. Ltd., as an innovation driven company.
+                His technical expertise in dairy nutrition and product development skills in ruminants has helped him to position <span class="company_name">Vetrina Healthcare Pvt. Ltd.</span>, as an innovation driven company.
                 He is recognized for managing multiple projects in corporate marketing in both domestic and international scenario with a solid training reputation in the field of livestock nutrition.
                 He has a proven ability to assess and manage demanding environments, providing decisive team leadership with a track record of motivating staff to acquire performance skills.</p>
                 <p class="hide " id="k_w1">
@@ -133,9 +133,9 @@
             </div>
             <div class="col-md-9">
               <h4>Dr. Santosh Pansare <br><small>Director</small>
-               <a href="https://www.linkedin.com/in/santosh-pansare-58bb18159" class="profileIcon">n</a></h4>
+               <a href="https://www.linkedin.com/in/santosh-pansare-58bb18159" class="profileIcon" target="_blank">n</a></h4>
               <p>
-                Dr. Santosh Pansare serves as Director of <span class="company_name">Vetrina Healthcare</span> Private Ltd. He has earned his both bachelors and masters degrees from Bombay veterinary College. He has obtained his MBA degree from USA. His initial working with Royal Canin and Pedigree has gained considerable experience in companion animal nutrition. His in-depth understanding of companion animal health industry in India has encouraged him to start dedicated companion animal division in company with innovative science based nutritional solutions for pet’s needs. He also has active involvement in production, product development, marketing strategies, capacity expansion and up gradation of facilities to international standards.
+                Dr. Santosh Pansare serves as Director of <span class="company_name">Vetrina Healthcare Pvt. Ltd.</span>. He has earned his both bachelors and masters degrees from Bombay veterinary College. He has obtained his MBA degree from USA. His initial working with Royal Canin and Pedigree has gained considerable experience in companion animal nutrition. His in-depth understanding of companion animal health industry in India has encouraged him to start dedicated companion animal division in company with innovative science based nutritional solutions for pet’s needs. He also has active involvement in production, product development, marketing strategies, capacity expansion and up gradation of facilities to international standards.
               </p>
              
               <!-- <div id="kw2" class="btn btn-primary">konw more..</div> -->
@@ -221,7 +221,7 @@
           <div class="row">
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 footerAddress">
               <h3>Address:</h3> 
-              1, Unique Tower, Chandrabhaga Nagar,<br> Katraj Dairy Road, Katraj, 411046<br />
+              1, Unique Tower, Chandrabhaga Nagar,<br> Katraj Dairy Road, Katraj, Pune-411046, <br />Maharashtra, India<br />
               E-Mail: info@vetrinahealthcare.com<br />
               Website:www.vetrinahealthcare.com <br /><br />
             </div>
@@ -229,7 +229,7 @@
               <ul>
                 <li><a href=<?php echo base_url('home'); ?>>Home</a></li>
                 <li><a href=<?php echo base_url('about'); ?>>About Us</a></li>
-                <li><a href="index.html#products">Products</a></li>
+                <li><a href="<?php echo base_url('home'); ?>#products">Products</a></li>
                 <li><a href=<?php echo base_url('blogs'); ?>>Blogs</a></li>
                 <li><a href=<?php echo base_url('career'); ?>>Career</a></li>
                 <li><a href=<?php echo base_url('contact'); ?>>Contact</a></li>            
@@ -267,10 +267,10 @@
           </div>
           <div class="modal-body">
             <div class="input-group input-group-lg">
-              <input type="text" class="form-control" placeholder="Search for...">
+              <input type="text" class="form-control" name="search_val" placeholder="Search for...">
               <span class="input-group-btn">
                 <!-- <button class="btn btn-default" type="button">Search</button> -->
-                <a href="product/search.html" class="btn btn-default" type="button">Search</a>
+                <a href="#" class="btn btn-default input" type="button">Search</a>
               </span>
             </div><!-- /input-group -->
           </div>

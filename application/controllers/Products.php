@@ -9,6 +9,7 @@ class Products extends MY_Controller {
     }
 
     public function index() {
+        $product_name = !empty($this->uri->segment(1)) ? $this->uri->segment(1) : 0;
         $permalink = !empty($this->uri->segment(2)) ? $this->uri->segment(2) : 0;
         $offset = empty($this->uri->segment(3)) ? 0 : $this->uri->segment(3);
         $menu_id = $this->model->getMenuID($permalink);
@@ -22,6 +23,8 @@ class Products extends MY_Controller {
         $data['product_count'] = $config["total_rows"];
 //        echo '<pre>';
 //        print_r($data);die();
+        $data['product_list'] = $permalink;
+        $data['product_name'] = $product_name;
         $this->load->view('product/product_list', $data);
     }
 

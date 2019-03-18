@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
      <link rel="shortcut icon" type="image/icon" href="<?php echo base_url('assets/images/'); ?>favicon.png"/>
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Vetrina | Home</title>
+    <title>Vetrina | Blog</title>
     <!-- Bootstrap -->
     <link href="<?php echo base_url('assets/css/'); ?>bootstrap.min.css" rel="stylesheet">
     <link href="<?php echo base_url('assets/css/'); ?>slick.css" rel="stylesheet">
@@ -190,7 +190,7 @@
           <div class="row">
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 footerAddress">
               <h3>Address:</h3> 
-              1, Unique Tower, Chandrabhaga Nagar,<br> Katraj Dairy Road, Katraj, 411046<br />
+              1, Unique Tower, Chandrabhaga Nagar,<br> Katraj Dairy Road, Katraj, Pune-411046, <br />Maharashtra, India<br />
               E-Mail: info@vetrinahealthcare.com<br />
               Website:www.vetrinahealthcare.com <br /><br />
             </div>
@@ -236,10 +236,10 @@
             </div>
             <div class="modal-body">
               <div class="input-group input-group-lg">
-                <input type="text" class="form-control" placeholder="Search for...">
+                <input type="text" class="form-control" name="search_val" placeholder="Search for...">
                 <span class="input-group-btn">
                   <!-- <button class="btn btn-default" type="button">Search</button> -->
-                  <a href="product/search.html" class="btn btn-default" type="button">Search</a>
+                  <a href="#" class="btn btn-default input" type="button">Search</a>
                 </span>
               </div><!-- /input-group -->
             </div>

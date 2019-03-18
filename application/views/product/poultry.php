@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
      <link rel="shortcut icon" type="image/icon" href="<?php echo base_url('assets/images/'); ?>favicon.png"/>
-    <title>Vetrina | Home</title>
+    <title>Vetrina | Product</title>
     <!-- Bootstrap -->
     <link href="<?php echo base_url('assets/css/'); ?>bootstrap.min.css" rel="stylesheet">
     <link href="<?php echo base_url('assets/css/'); ?>slick.css" rel="stylesheet">
@@ -91,13 +91,13 @@
     </div><!-- /.container -->
 
   
-     <section class="container-fluid"> 
+     <section class="container"> 
       <div class="row"> 
           <!-- <div class="col-md-2"></div> -->
           <div class="col-md-4">
             <div class="product_item">
               <div class="item-title">
-                <h3>Farm end supplements</h3>
+                <h3>Farm End Supplements</h3>
              </div>
              <div class="item-detail ">
               <p>Innovative products formulated to be delivered through water for prompt results. Farmers can use these breed specific, farm specific, shed specific products to overcome diseases and to curtail losses of all types. These high end products have no side effects and residual effects.</p>
@@ -108,7 +108,7 @@
           <div class="col-md-4">
             <div class="product_item">
               <div class="item-title">
-                <h3>Feed End supplements</h3>
+                <h3>Feed End Supplements</h3>
              </div>
              <div class="item-detail ">
               <p>Poultry feed plays a vital role in economics of poultry farming. Need-based and innovative solutions cut down the production cost, increase bio-availability and improve the profitability of farming.</p>
@@ -119,10 +119,10 @@
           <div class="col-md-4">
             <div class="product_item ">
               <div class="item-title">
-                <h3>Bio-security and disinfection</h3>
+                <h3>Bio-Security and Disinfection</h3>
              </div>
              <div class="item-detail">
-              <p>Bio-security is the most important managemental factor to combat the risk of introduction and spread of diseases. Bio-security management contributes a lot in poultry profitability. Products used in biosecurity must be on-corrosive, non-toxic and safe to use without any residual effects.</p>
+              <p>Bio-security is the most important managemental factor to combat the risk of introduction and spread of diseases. Bio-security management contributes a lot in poultry profitability. Products used in biosecurity must be non-corrosive, non-toxic and safe to use without any residual effects.</p>
               <a href="<?php echo base_url('poultry/bio-security-and-disinfection'); ?>" class="w3-display-bottomright btn btn-primary">Products</a>
             </div>
            </div>
@@ -136,7 +136,7 @@
           <div class="row">
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 footerAddress">
               <h3>Address:</h3> 
-              1, Unique Tower, Chandrabhaga Nagar,<br> Katraj Dairy Road, Katraj, 411046<br />
+              1, Unique Tower, Chandrabhaga Nagar,<br> Katraj Dairy Road, Katraj, Pune-411046, <br />Maharashtra, India<br />
               E-Mail: info@vetrinahealthcare.com<br />
               Website:www.vetrinahealthcare.com<br /><br />
             </div>
@@ -144,7 +144,7 @@
               <ul>
                 <li><a href=<?php echo base_url('home'); ?>>Home</a></li>
                 <li><a href=<?php echo base_url('about'); ?>>About Us</a></li>
-                <li><a href="../index.html#products">Products</a></li>
+                <li><a href="<?php echo base_url('home'); ?>#products">Products</a></li>
                 <li><a href=<?php echo base_url('blogs'); ?>>Blogs</a></li>
                 <li><a href=<?php echo base_url('career'); ?>>Career</a></li>
                 <li><a href=<?php echo base_url('contact'); ?>>Contact</a></li>              
@@ -182,10 +182,10 @@
             </div>
             <div class="modal-body">
               <div class="input-group input-group-lg">
-                <input type="text" class="form-control" placeholder="Search for...">
+                <input type="text" class="form-control" name="search_val" placeholder="Search for...">
                 <span class="input-group-btn">
                   <!-- <button class="btn btn-default" type="button">Search</button> -->
-                  <a href="search.html" class="btn btn-default" type="button">Search</a>
+                  <a href="#" class="btn btn-default input" type="button">Search</a>
                 </span>
               </div><!-- /input-group -->
             </div>

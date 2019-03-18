@@ -75,13 +75,12 @@
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href=<?php echo base_url('home'); ?>>Home</a></li>
                     <li class="breadcrumb-item"><a href="#" onclick="goBack()"><?php echo ucfirst($product_name); ?><!-- Product --></a></li>
-                    <li class="breadcrumb-item active" aria-current="page"><?php echo ucwords(str_replace('-', ' ', $product_list));?><!-- Product List --></li>
                 </ol>
             </nav>
         </div>
 
         <div class="container-fluid">
-            <div class="row w3-center w3-margin-top"><div class="col-md-12"><h1><?php echo ucwords(str_replace('-', ' ', $product_list));?></h1></div></div>
+            <div class="row w3-center w3-margin-top"><div class="col-md-12"><h1><?php echo ucwords($product_name);?></h1></div></div>
             <div class="row">
                 <section class="featured-posts w3-margin-top">
                     <div class="container">
