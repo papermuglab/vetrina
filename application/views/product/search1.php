@@ -35,8 +35,7 @@
                   </div>
                 </div>
               </div>
-            </div>
-           
+            </div>           
             <div class="row d-flex align-items-stretch w3-margin-top">
               <!-- <div class="image col-lg-5"><img src="../../<?php echo base_url('assets/images/'); ?>blogs/featured-pic-2.jpeg" alt="..."></div> -->
               <div class="text col-lg-12">
