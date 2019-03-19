@@ -20,7 +20,10 @@ class Search extends MY_Controller {
         $data['products'] = $this->model->search($offset, $searchName);
         $data['product_count'] = $config["total_rows"];
         $data['product_name'] = $searchName;
+        $data['menu'] = 'search';
+        $this->load->view('header',$data);
         $this->load->view('search', $data);
+        $this->load->view('footer');
     }
 
     public function detail() {

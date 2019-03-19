@@ -7,7 +7,10 @@ class Career extends MY_Controller {
     }
 
     public function index() {
+        $data['menu'] = 'career';
+        $this->load->view('header',$data);
         $this->load->view('career');
+        $this->load->view('footer');
     }
 
     public function sendEmail() {
