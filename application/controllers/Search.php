@@ -36,5 +36,10 @@ class Search extends MY_Controller {
             show_404();
         }
     }
-
+    public function sample() {
+        $data['menu'] = 'search';
+        $this->load->view('header',$data);
+        $this->load->view('product/search1');
+        $this->load->view('footer');
+    }
 }
