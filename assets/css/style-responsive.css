@@ -3,9 +3,22 @@
   	width: 1024px;
   }
 }
+/* I-Pad */
 @media (max-width: 991px) {
+  .header, .iconSocial,.iconSocial>h3{
+    text-align: center;
+  }
+  .career_info,.contact_container {
+        border-right: 0px !important;
+  }
   .container {
     width: 100%;
+  }
+  .productCaption{
+    font-size: 30px;
+  }
+  .navbar-inverse .navbar-nav>li>a {
+    font-size: 12px;
   }
   .mainProducts {
     margin: 30px 0;
@@ -16,100 +29,145 @@
     display: inline-block;
     margin-right: 30px;
     height: 100px;
-    width: 100px;
+    width: 100%;
     border-radius: 10px;
     background-color: #c8c8c8;
+  }
+  .productIcons {
+    background-position: center center;
+    background-size: 100%;
+    display: block;
+    height: 239px;
+    width: 100%;
+    transition: 0.30s;
   }
   .mainProducts li:last-child {
     margin-right: 0;
   }
 }
 @media (max-width: 767px) {
-  .slick-prev {
-    /*right: 0px;*/
-    left: 0px;
-    top: 45%;
-  }
-  .slick-next {
-    /*left: 0px;*/
-    right: 0px;
-    bottom: 45%;
-  }
-  .sliderHome, .homeSlide, .bannerSlide {
-    height: auto;
-    min-height: 260px
-  }
-  .testimonialSlider {
-    width: 95%;
-  }
-  .homeSlide {
-    height: 
-  }
-  .mainProducts {
-    margin: 0 0 30px;
-    padding: 0;
-    text-align: center;
-  }
-  .mainProducts li {
-    display: block;
-    margin: 0 auto 20px;
-    height: 180px;
-    /*height: 150px;*/
-    width: 150px;
-    border-radius: 10px;
-    background-color: #c8c8c8;
-  }
-  .mainProducts li:last-child {
-    margin: 0 auto;
-  }
-  section.featured-posts .image {  
-    height: auto;
-    overflow: hidden;
-    padding: 0;
-}
-section.featured-posts .text-inner {
-    padding: 0px;
-    height: auto;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
-}
-.career_info {
-    border-right: 1px solid #a3228e;
-    padding: 0px 20px;
-    margin: 40px 0px;
-    height: auto;
-}
-#dextop_map{
-  display: none;
-}
-#mobile_map{
-  display:block !important;
-}
-.mapouter {
-    text-align: right;
-    height: 300px !important;
-    width: 300px !important;
-}
-.gmap_canvas {
-    overflow: hidden;
-    background: none!important;
-    height: 300px !important;
-    width: 300px !important;
-}
-#copyright p{
-  text-align: center !important; 
-}
-.career_info,.contact_container {
-  border-right: 0px;
-}
-.product_item {
-    border: 1px solid #a3228e;
-    margin-bottom: 20px;
-    height: auto !important;
-    box-shadow: 0 0 17px #353232;
-}
+    .iconSocial>ul{
+        margin-left: -50px;
+    }
+    .carousel-caption {
+        font-size:20px;
+    }
+    .productCaption{
+        font-size: 14px;
+    }
+    .navbar-inverse .navbar-nav>li>a {
+        font-size: 18px;
+    }
+    .slogan {
+        font-size: 20px;
+        padding:0px;
+    }
+    .slogan_div {
+        padding:0px;
+    }
+    h3{
+        font-size:25px;
+    }
+    .slick-prev {
+        /*right: 0px;*/
+        left: 0px;
+        top: 45%;
+    }
+    .slick-next {
+        /*left: 0px;*/
+        right: 0px;
+        bottom: 45%;
+    }
+    .sliderHome, .homeSlide, .bannerSlide {
+        height: auto;
+        min-height: 260px;
+    }
+    .testimonialSlider {
+        width: 95%;
+    }
+    /*.homeSlide {*/
+    /*    height: */
+    /*}*/
+    .mainProducts {
+        /*margin: 0 0 30px;*/
+        padding: 0;
+        text-align: center;
+    }
+    .mainProducts li {
+        display: block;
+        margin: 0 auto 20px;
+        height: 180px;
+        /*height: 150px;*/
+        width: 150px;
+        border-radius: 10px;
+        background-color: #c8c8c8;
+    }
+    .mainProducts li:last-child {
+        margin: 0 auto;
+    }
+    section.featured-posts .image {  
+        height: auto;
+        overflow: hidden;
+        padding: 0;
+    }
+    section.featured-posts .text-inner {
+        padding: 0px;
+        height: auto;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+    .career_info {
+        border-right: 0px !important;
+        padding: 0px 20px;
+        margin: 40px 0px;
+        height: auto;
+    }
+    #dextop_map{
+      display: none;
+    }
+    #mobile_map{
+      display:block !important;
+    }
+    .mapouter {
+        text-align: right;
+        height: 300px !important;
+        width: 300px !important;
+    }
+    .gmap_canvas {
+        overflow: hidden;
+        background: none!important;
+        height: 300px !important;
+        width: 300px !important;
+    }
+    #copyright p{
+      text-align: center !important; 
+    }
+    .career_info,.contact_container {
+      border-right: 0px;
+    }
+    .product_item {
+        border: 1px solid #a3228e;
+        margin-bottom: 20px;
+        height: auto !important;
+        box-shadow: 0 0 17px #353232;
+    }
 }
 @media (min-width: 992px){
-.col-md-4 {
-    width: 32.33333333%;
+    .list-item {
+        width: 32.33333333%;
+    }
+}
+@media (max-width: 767px){
+    .navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
+        color: #fff;
+    }
+    .productIcons {
+        background-position: center center;
+        background-size: 100%;
+        display: block;
+        /*height: 239px;*/
+        height: 100px;
+        width: 100%;
+        transition: 0.30s;
+    }
 }
