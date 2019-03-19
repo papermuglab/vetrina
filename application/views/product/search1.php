@@ -1,4 +1,3 @@
-
     <div class="container-fluid">
       <div class="row w3-center w3-margin-top"><div class="col-md-12"><h1>Search Result</h1></div></div>
       <div class="row">
@@ -6,6 +5,7 @@
           <div class="container">
             <div class="row d-flex align-items-stretch w3-margin-top">
               <!-- <div class="image col-lg-5"><img src="../../<?php echo base_url('assets/images/'); ?>blogs/featured-pic-1.jpeg" alt="..."></div> -->
+
               <div class="text col-lg-12">
                 <div class="text-inner d-flex align-items-center">
                   <div class="content">
@@ -20,6 +20,7 @@
                 </div>
               </div>
             </div>
+            
             <div class="row d-flex align-items-stretch w3-margin-top">
               <!-- <div class="image col-lg-5"><img src="../../<?php echo base_url('assets/images/'); ?>blogs/featured-pic-3.jpeg" alt="..."></div> -->
               <div class="text col-lg-12">
@@ -35,6 +36,7 @@
                 </div>
               </div>
             </div>
+           
             <div class="row d-flex align-items-stretch w3-margin-top">
               <!-- <div class="image col-lg-5"><img src="../../<?php echo base_url('assets/images/'); ?>blogs/featured-pic-2.jpeg" alt="..."></div> -->
               <div class="text col-lg-12">
@@ -52,7 +54,8 @@
               </div>
             </div>
           </div>
+        
         </section>
       </div>
-    </div><!-- /.container -->
-
+    
+    </div>
