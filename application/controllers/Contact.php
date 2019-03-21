@@ -9,10 +9,7 @@ class Contact extends MY_Controller {
     }
 
     public function index() {
-        $data['menu'] = 'contact';
-        $this->load->view('header',$data);
         $this->load->view('contact-us');
-        $this->load->view('footer');
     }
 
     // This is AJAX method.

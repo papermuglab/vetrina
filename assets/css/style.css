@@ -27,32 +27,28 @@ html,body{
 }
 
 /*----------------rohidas style start--------------------*/
-  .copyright-section{
-    padding-left: 0px;
-    padding-right: 6px;
-  }
-  .pagination>li>a,.pagination>li>b{
-    position: relative;
-    float: left;
-    padding: 6px 12px;
-    margin-left: -1px;
-    line-height: 1.42857143;
-    color: #337ab7;
-    text-decoration: none;
-    background-color: #fff;
-    border: 1px solid #ddd;
-  }
-  .pagination>li>a:hover,.pagination>li>b {
-    color: #23527c;
-    background-color: #eee;
-    border-color: #ddd;
-  }
-  #mobile_map{display: none}
-  .navbar-inverse .navbar-nav>li>a:hover {
+.pagination>li>a,.pagination>li>b{
+            position: relative;
+            float: left;
+            padding: 6px 12px;
+            margin-left: -1px;
+            line-height: 1.42857143;
+            color: #337ab7;
+            text-decoration: none;
+            background-color: #fff;
+            border: 1px solid #ddd;
+        }
+        .pagination>li>a:hover,.pagination>li>b {
+            color: #23527c;
+            background-color: #eee;
+            border-color: #ddd;
+        }
+#mobile_map{display: none}
+.navbar-inverse .navbar-nav>li>a:hover {
     color: #F58221;
     background-color: transparent;
-  }
-  .navbar-inverse .navbar-nav>li>.active {
+}
+.navbar-inverse .navbar-nav>li>.active {
     color: #F58221;
     background-color: transparent;
 }
@@ -950,7 +946,7 @@ h3 {
   height: 500px;
 }
 .mainProducts,.mainProductsName {
-  margin-top: 30px;
+  margin: 30px 0;
   padding: 0;
   text-align: center;
 }
@@ -1035,7 +1031,7 @@ h3 {
   background-image: url('../images/banner/poultry.png');
 }
 .birdBanner { 
-  background-image: url('../images/banner/BIRD.jpg');
+  background-image: url('../images/banner/birdbanner1.png');
 }
 .dogBanner { 
   background-image: url('../images/banner/GSD.jpg');
@@ -1057,7 +1053,7 @@ h3 {
 }
 .navbar-inverse .navbar-nav>li>a {
   color: #fff;
-  font-size: 23px;
+  font-size: 17px;
   font-weight: 600;
 }
 .navbar-inverse .navbar-nav>.active>a, 
@@ -1073,8 +1069,7 @@ h3 {
   background-color: #8c1a79
 }
 .header {
-  /*padding: 20px 0 */
-  padding-top: 10px;
+  padding: 20px 0 
 }
 .logo {
   margin
@@ -1087,7 +1082,7 @@ h3 {
   display: inline-block;
   text-align: center;
 }
-.iconSocial, .iconSocial h3 {
+.iconSocial {
   text-align: right;
 }
 .iconSocial li {
@@ -1106,12 +1101,12 @@ h3 {
 .iconSocial li a img {
     height: 30px;
     width: 30px;
-    border-radius: 15%;
+    border-radius: 50%;
 }
 .iconSocial li:last-child a{
   height: 30px;
   width: 30px;
-  border-radius: 15%;
+  border-radius: 50%;
   display: block;
   background-color: #00011d;
   margin-top: 10px;
@@ -1154,7 +1149,7 @@ h3 {
   color: #fff;
 }
 .copyright {
-  /*margin-top: 30px;*/
+  margin-top: 30px;
   padding-top: 30px;
   border-top: 1px solid #636482;
 }
@@ -1201,17 +1196,12 @@ h3 {
   font-family: 'Glyphicons Halflings';
   font-size: 20px;
 }
-.productCaption{
-  font-weight: bold;
-  margin-top: 10px;
-}
-
 .productIcons {
   background-position: center center;
   background-size: 100%;
   display: block;
   height: 150px;
-  width: 100%;;
+  width: 150px;
   transition: 0.30s
 }
 .mainProducts li:hover {

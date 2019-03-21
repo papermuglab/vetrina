@@ -7,6 +7,7 @@ class Search extends MY_Controller {
         $this->load->library(array('pagination', 'dml'));
         $this->load->model('product_model', 'model');
     }
+
     public function index() {
         $searchName = !empty($this->uri->segment(2)) ? urldecode($this->uri->segment(2)) : 0;
         $offset = empty($this->uri->segment(3)) ? 0 : $this->uri->segment(3);
@@ -19,11 +20,9 @@ class Search extends MY_Controller {
         $data['products'] = $this->model->search($offset, $searchName);
         $data['product_count'] = $config["total_rows"];
         $data['product_name'] = $searchName;
-        $data['menu'] = 'search';
-        $this->load->view('header',$data);
         $this->load->view('search', $data);
-        $this->load->view('footer');
     }
+
     public function detail() {
         $permalink = !empty($this->uri->segment(2)) ? $this->uri->segment(2) : 0;
         $data['row'] = $this->dml->getRow(TBL_PRODUCTS, 'permalink', $permalink);
@@ -33,13 +32,6 @@ class Search extends MY_Controller {
         } else {
             show_404();
         }
-    }
-
-    public function sample() {
-        $data['menu'] = 'search';
-        $this->load->view('header',$data);
-        $this->load->view('product/search1');
-        $this->load->view('footer');
     }
 
 }
